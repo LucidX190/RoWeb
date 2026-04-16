@@ -12,6 +12,8 @@
         "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
         "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "$env{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake",
         "VCPKG_TARGET_TRIPLET": "wasm32-emscripten",
+        "VCPKG_OVERLAY_TRIPLETS": "${sourceDir}/vcpkg-overlays/triplets",
+        "VCPKG_OVERLAY_PORTS": "${sourceDir}/vcpkg-overlays/ports",
         "CMAKE_MAKE_PROGRAM": "ninja",
         "CMAKE_ASM_COMPILER": "emcc"
       }
@@ -153,6 +155,21 @@
       }
     },
     {
+      "name": "pi-rcc-release",
+      "displayName": "Raspberry Pi RCC Release (ARM64)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/pi-rcc-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "RCC_BUILD": "ON",
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "arm64-linux",
+        "CMAKE_MAKE_PROGRAM": "ninja"
+      }
+    },
+    {
       "name": "android-armv7",
       "displayName": "Android ARMv7",
       "description": "Build for Android 32-bit (armeabi-v7a), minSdk 15",
@@ -182,22 +199,6 @@
         "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_MAKE_PROGRAM": "ninja",
         "VCPKG_TARGET_TRIPLET": "arm64-android"
-      }
-    },
-    {
-      "name": "cafe-release",
-      "displayName": "Cafe Release",
-      "inherits": "cafe",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release"
-      }
-    },
-    {
-      "name": "cafe-debug",
-      "displayName": "Cafe Debug",
-      "inherits": "cafe",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
       }
     }
   ]
