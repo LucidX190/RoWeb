@@ -4,6 +4,9 @@ self.addEventListener("fetch", function(ev) {
   var url = new URL(ev.request.url);
   // Let cross-origin fetches pass through untouched
   if (url.origin !== self.location.origin) return;
+  // Blob URLs are same-origin but must not be re-streamed through the SW —
+  // the WASM pthread workers fetch them directly and re-wrapping breaks them.
+  if (url.protocol === 'blob:') return;
   // Avoid breaking "only-if-cached" requests with non-same-origin mode
   if (ev.request.cache === "only-if-cached" && ev.request.mode !== "same-origin") return;
 

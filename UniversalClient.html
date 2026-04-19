@@ -961,10 +961,9 @@
 
       var blobData;
       if (isXml) {
+        // XML format: safe to modify and reload from a blob URL
         var text = new TextDecoder('utf-8').decode(buf);
-        // Inject bot player script so it runs when the place starts
         text = injectBotScript(text);
-        // Also patch any remaining NumPlayers checks as a belt-and-suspenders backup
         text = text
           .replace(/\bNumPlayers\s*<\s*([2-9]\d*)/g,  'NumPlayers < 1')
           .replace(/\bnumPlayers\s*<\s*([2-9]\d*)/g,  'numPlayers < 1')
@@ -972,13 +971,13 @@
           .replace(/\bnumPlayers\s*>=\s*([2-9]\d*)/g, 'numPlayers >= 1')
           .replace(/#\s*game\.Players:GetPlayers\(\)\s*<\s*([2-9]\d*)/g,  '#game.Players:GetPlayers() < 1')
           .replace(/#\s*game\.Players:GetPlayers\(\)\s*>=\s*([2-9]\d*)/g, '#game.Players:GetPlayers() >= 1');
-        blobData = new TextEncoder().encode(text);
+        var blobUrl = URL.createObjectURL(new Blob([new TextEncoder().encode(text)]));
+        doLoad(blobUrl, name);
       } else {
-        blobData = bytes;
+        // Binary RBLX format: the C++ engine must fetch it directly over HTTP.
+        // Blob URLs created in JS aren't reachable by the WASM pthread fetch thread.
+        doLoad(url, name);
       }
-
-      var blobUrl = URL.createObjectURL(new Blob([blobData]));
-      doLoad(blobUrl, name);
     } catch(e) {
       setStatus('Failed to fetch ' + name + ': ' + e.message);
       console.error('[loadPlace]', e);
