@@ -468,7 +468,6 @@
     <div id="logo">ROBLOX <span>client</span></div>
     <div class="topbar-sep"></div>
     <div id="topbar-status">Initializing engine…</div>
-    <button class="tb-btn" id="bot-btn" onclick="spawnBot()" disabled title="Add a second player so 2-player games can start">+ Bot Player</button>
     <button class="tb-btn" onclick="requestFullscreen()">⛶ Fullscreen</button>
   </div>
 
@@ -887,7 +886,52 @@
       pendingLoad = {url: url, name: name};
       return;
     }
-    doLoad(url, name);
+    doLoadWithPatch(url, name);
+  }
+
+  // Fetch the .rbxl, patch 2-player lobby gates so they work in solo, then
+  // hand a blob URL to the engine.  Blob / local URLs skip the fetch entirely.
+  async function doLoadWithPatch(url, name) {
+    if (url.startsWith('blob:') || !url.startsWith('http')) {
+      doLoad(url, name);
+      return;
+    }
+    setStatus('Fetching ' + name + '…');
+    try {
+      var r = await fetch(url);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      var buf = await r.arrayBuffer();
+      var bytes = new Uint8Array(buf);
+
+      // Detect XML format: starts with '<' (0x3C) or UTF-8 BOM then '<'
+      var isXml = bytes[0] === 0x3C ||
+                  (bytes[0] === 0xEF && bytes[1] === 0xBB && bytes[2] === 0xBF && bytes[3] === 0x3C);
+
+      var blobData;
+      if (isXml) {
+        var text = new TextDecoder('utf-8').decode(buf);
+        var patched = text
+          // while NumPlayers < 2 (or 3, 4…) → < 1
+          .replace(/\bNumPlayers\s*<\s*([2-9]\d*)/g,  'NumPlayers < 1')
+          .replace(/\bnumPlayers\s*<\s*([2-9]\d*)/g,  'numPlayers < 1')
+          // if NumPlayers >= 2 → >= 1
+          .replace(/\bNumPlayers\s*>=\s*([2-9]\d*)/g, 'NumPlayers >= 1')
+          .replace(/\bnumPlayers\s*>=\s*([2-9]\d*)/g, 'numPlayers >= 1')
+          // #GetPlayers() variants
+          .replace(/#\s*game\.Players:GetPlayers\(\)\s*<\s*([2-9]\d*)/g,  '#game.Players:GetPlayers() < 1')
+          .replace(/#\s*game\.Players:GetPlayers\(\)\s*>=\s*([2-9]\d*)/g, '#game.Players:GetPlayers() >= 1');
+        if (patched !== text) console.log('[solo] Patched 2-player gates in ' + name);
+        blobData = new TextEncoder().encode(patched);
+      } else {
+        blobData = bytes;
+      }
+
+      var blobUrl = URL.createObjectURL(new Blob([blobData]));
+      doLoad(blobUrl, name);
+    } catch(e) {
+      setStatus('Failed to fetch ' + name + ': ' + e.message);
+      console.error('[loadPlace]', e);
+    }
   }
 
   function doLoad(url, name) {
@@ -919,18 +963,6 @@
     line.textContent = text;
     panel.appendChild(line);
     panel.scrollTop = panel.scrollHeight;
-  }
-
-  function spawnBot() {
-    if (!moduleReady) return;
-    try {
-      Module.ccall('spawnBotPlayer', null, [], []);
-      setStatus('Bot player added — game should start');
-      document.getElementById('bot-btn').disabled = true;
-    } catch(e) {
-      setStatus('Bot error: ' + e.message);
-      console.error(e);
-    }
   }
 
   function requestFullscreen() {
@@ -1003,12 +1035,11 @@
     onRuntimeInitialized: function() {
       Module.setStatus('');
       moduleReady = true;
-      document.getElementById('bot-btn').disabled = false;
       setStatus('Engine ready — select a game');
       if (pendingLoad) {
         var p = pendingLoad;
         pendingLoad = null;
-        doLoad(p.url, p.name);
+        doLoadWithPatch(p.url, p.name);
       }
     }
   };
