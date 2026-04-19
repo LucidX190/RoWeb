@@ -1,9 +1,11 @@
 self.addEventListener("install", () => self.skipWaiting());
 self.addEventListener("activate", e => e.waitUntil(self.clients.claim()));
 self.addEventListener("fetch", function(ev) {
-  // Only intercept same-origin requests — let cross-origin fetches pass through untouched
   var url = new URL(ev.request.url);
+  // Let cross-origin fetches pass through untouched
   if (url.origin !== self.location.origin) return;
+  // Avoid breaking "only-if-cached" requests with non-same-origin mode
+  if (ev.request.cache === "only-if-cached" && ev.request.mode !== "same-origin") return;
 
   ev.respondWith(fetch(ev.request).then(function(r) {
     if (r.status === 0) return r;

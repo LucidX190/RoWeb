@@ -442,9 +442,22 @@
   <!-- COI service worker — registers coi-sw.js to add COOP/COEP headers -->
   <script>
   if (!self.crossOriginIsolated && 'serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./coi-sw.js').then(function(reg) {
-      if (!reg.active) location.reload();
-    }).catch(function(e) { console.warn('SW failed:', e); });
+    // ?coi-sw param is the loop guard: if we already reloaded and are still not
+    // isolated, the SW can't help — log a warning and don't loop.
+    var _coiParams = new URLSearchParams(location.search);
+    if (_coiParams.has('coi-sw')) {
+      console.warn('[COI] SW is active but crossOriginIsolated is still false. ' +
+        'Check that the server sends COOP/COEP headers (see _headers file).');
+    } else {
+      navigator.serviceWorker.register('./coi-sw.js')
+        .then(function() { return navigator.serviceWorker.ready; })
+        .then(function() {
+          // SW is fully active — reload so it can intercept the navigation.
+          _coiParams.set('coi-sw', '');
+          location.search = _coiParams.toString();
+        })
+        .catch(function(e) { console.warn('[COI] SW registration failed:', e); });
+    }
   }
   </script>
 </head>
