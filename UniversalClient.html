@@ -439,7 +439,14 @@
 
   </style>
 
-  <!-- GitHub Pages sends COOP/COEP headers natively — no SW needed -->
+  <!-- COI service worker — registers coi-sw.js to add COOP/COEP headers -->
+  <script>
+  if (!self.crossOriginIsolated && 'serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./coi-sw.js').then(function(reg) {
+      if (!reg.active) location.reload();
+    }).catch(function(e) { console.warn('SW failed:', e); });
+  }
+  </script>
 </head>
 <body>
 
