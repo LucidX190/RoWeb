@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROBLOX</title>
+  <style>
+    :root {
+      --bg:       #0a0a0a;
+      --surface:  #111111;
+      --surface2: #181818;
+      --border:   #242424;
+      --border2:  #303030;
+      --text:     #ffffff;
+      --muted:    #666666;
+      --muted2:   #444444;
+      --accent:   #ffffff;
+      --radius:   6px;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 13px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── Top bar ─────────────────────────────────────────────────────────── */
+    #topbar {
+      height: 44px;
+      min-height: 44px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      gap: 12px;
+      z-index: 10;
+    }
+    #logo {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text);
+      user-select: none;
+    }
+    #logo span { color: var(--muted); font-weight: 400; }
+
+    .topbar-sep {
+      width: 1px;
+      height: 20px;
+      background: var(--border2);
+    }
+
+    #topbar-status {
+      flex: 1;
+      font-size: 12px;
+      color: var(--muted);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .tb-btn {
+      background: var(--surface2);
+      color: var(--muted);
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      padding: 5px 12px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: color 0.1s, border-color 0.1s, background 0.1s;
+      white-space: nowrap;
+    }
+    .tb-btn:hover { color: var(--text); border-color: var(--border2); background: #222; }
+
+    /* ── Body ────────────────────────────────────────────────────────────── */
+    #body {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+    }
+
+    /* ── Sidebar ─────────────────────────────────────────────────────────── */
+    #sidebar {
+      width: 260px;
+      min-width: 260px;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* filter tabs */
+    #filter-tabs {
+      display: flex;
+      border-bottom: 1px solid var(--border);
+      padding: 0 8px;
+      gap: 2px;
+      background: var(--surface);
+    }
+    .tab {
+      padding: 10px 10px 9px;
+      font-size: 12px;
+      color: var(--muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.1s, border-color 0.1s;
+      white-space: nowrap;
+      user-select: none;
+    }
+    .tab:hover { color: #bbb; }
+    .tab.active { color: var(--text); border-bottom-color: #fff; }
+
+    /* search */
+    #search-wrap {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    #search {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-size: 12px;
+      padding: 6px 10px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    #search::placeholder { color: var(--muted2); }
+    #search:focus { border-color: #555; }
+
+    /* game list */
+    #game-list {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 4px 0;
+    }
+    #game-list::-webkit-scrollbar { width: 4px; }
+    #game-list::-webkit-scrollbar-track { background: transparent; }
+    #game-list::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+    #game-list::-webkit-scrollbar-thumb:hover { background: #3a3a3a; }
+
+    .game-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      cursor: pointer;
+      gap: 9px;
+      transition: background 0.08s;
+      border-radius: 0;
+    }
+    .game-item:hover { background: #161616; }
+    .game-item.active { background: #1c1c1c; }
+    .game-item.active .gi-name { color: #fff; }
+
+    .gi-icon {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      background: #1e1e1e;
+      border: 1px solid var(--border2);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--muted2);
+    }
+    .game-item.active .gi-icon {
+      border-color: #444;
+      color: #888;
+    }
+
+    .gi-info { flex: 1; min-width: 0; }
+    .gi-name {
+      color: #ccc;
+      font-size: 12px;
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .gi-sub {
+      color: var(--muted);
+      font-size: 10px;
+      margin-top: 1px;
+    }
+
+    .gi-del {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--muted2);
+      cursor: pointer;
+      font-size: 14px;
+      padding: 2px 4px;
+      line-height: 1;
+      border-radius: 3px;
+      transition: color 0.1s, background 0.1s;
+    }
+    .game-item:hover .gi-del { display: flex; align-items: center; }
+    .gi-del:hover { color: #e55; background: #1a0a0a; }
+
+    /* list states */
+    #list-state {
+      padding: 24px 12px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* drop zone (custom tab) */
+    #drop-zone {
+      display: none;
+      margin: 8px 10px;
+      border: 1px dashed var(--border2);
+      border-radius: var(--radius);
+      padding: 16px 10px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 11px;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+      line-height: 1.6;
+    }
+    #drop-zone.hover {
+      border-color: #555;
+      background: #141414;
+      color: #aaa;
+    }
+    #drop-zone .dz-icon { font-size: 20px; margin-bottom: 4px; }
+
+    /* ── Main canvas area ────────────────────────────────────────────────── */
+    #main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      overflow: hidden;
+      padding: 16px;
+      min-width: 0;
+    }
+
+    #canvas-wrap {
+      position: relative;
+      border: 1px solid var(--border);
+      background: #000;
+    }
+    canvas#canvas {
+      display: block;
+      background: #000;
+    }
+
+    /* progress bar over canvas */
+    #load-bar {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--border);
+      pointer-events: none;
+    }
+    #load-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      transition: width 0.25s ease;
+    }
+
+    #canvas-status {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      gap: 12px;
+    }
+    #canvas-status.hidden { display: none; }
+    #cs-title {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    #cs-msg {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .cs-spinner {
+      width: 20px; height: 20px;
+      border: 2px solid #2a2a2a;
+      border-top-color: #666;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* bottom bar */
+    #bottombar {
+      height: 28px;
+      min-height: 28px;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      gap: 10px;
+    }
+    #bb-status {
+      flex: 1;
+      font-size: 11px;
+      color: var(--muted);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .bb-btn {
+      font-size: 11px;
+      color: var(--muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 3px 6px;
+      border-radius: 3px;
+      transition: color 0.1s, background 0.1s;
+    }
+    .bb-btn:hover { color: var(--text); background: #1e1e1e; }
+
+    /* console overlay */
+    #console-panel {
+      position: fixed;
+      bottom: 28px; right: 0;
+      width: 480px;
+      max-height: 220px;
+      background: rgba(10,10,10,0.96);
+      border: 1px solid var(--border);
+      border-right: none;
+      border-bottom: none;
+      border-radius: var(--radius) 0 0 0;
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      overflow-y: auto;
+      padding: 8px;
+      display: none;
+      z-index: 50;
+    }
+    #console-panel::-webkit-scrollbar { width: 3px; }
+    #console-panel::-webkit-scrollbar-thumb { background: #2a2a2a; }
+    #console-panel.visible { display: block; }
+    .cl { color: #888; line-height: 1.5; }
+    .cl.err { color: #e55; }
+
+    /* file input hidden */
+    #file-input { display: none; }
+
+    /* ── Multiplayer panel ───────────────────────────────────────────────── */
+    #mp-panel {
+      display: none;
+      flex-direction: column;
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px 10px;
+      gap: 10px;
+    }
+    #mp-panel.visible { display: flex; }
+
+    .mp-label {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+    .mp-input {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-size: 12px;
+      padding: 6px 10px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .mp-input::placeholder { color: var(--muted2); }
+    .mp-input:focus { border-color: #555; }
+
+    #mp-join-btn {
+      width: 100%;
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: var(--radius);
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 4px;
+      transition: background 0.1s;
+    }
+    #mp-join-btn:hover { background: #ddd; }
+    #mp-join-btn:disabled { background: #333; color: #666; cursor: default; }
+
+    #mp-status {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-top: 2px;
+    }
+    #mp-status.err { color: #e55; }
+    #mp-status.ok  { color: #5c5; }
+
+    .mp-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2px 0;
+    }
+
+    .mp-hint {
+      font-size: 10px;
+      color: var(--muted2);
+      line-height: 1.6;
+    }
+
+  </style>
+
+  <!-- COI service worker for SharedArrayBuffer / pthreads -->
+  <script>
+  (function(){
+    var sw = `
+self.addEventListener("install", () => self.skipWaiting());
+self.addEventListener("activate", e => e.waitUntil(self.clients.claim()));
+self.addEventListener("fetch", function(ev) {
+  if (ev.request.cache === "only-if-cached" && ev.request.mode !== "same-origin") return;
+  ev.respondWith(fetch(ev.request).then(function(r) {
+    if (r.status === 0) return r;
+    var h = new Headers(r.headers);
+    h.set("Cross-Origin-Opener-Policy","same-origin");
+    h.set("Cross-Origin-Embedder-Policy","require-corp");
+    return new Response(r.body, {status:r.status,statusText:r.statusText,headers:h});
+  }));
+});`;
+    if (!self.crossOriginIsolated && 'serviceWorker' in navigator) {
+      var blob = new Blob([sw], {type:'text/javascript'});
+      navigator.serviceWorker.register(URL.createObjectURL(blob)).then(function(reg) {
+        if (!reg.active) location.reload();
+      });
+    }
+  })();
+  </script>
+</head>
+<body>
+
+  <!-- ── Top bar ── -->
+  <div id="topbar">
+    <div id="logo">ROBLOX <span>client</span></div>
+    <div class="topbar-sep"></div>
+    <div id="topbar-status">Initializing engine…</div>
+    <button class="tb-btn" onclick="requestFullscreen()">⛶ Fullscreen</button>
+  </div>
+
+  <!-- ── Body ── -->
+  <div id="body">
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <div id="filter-tabs">
+        <div class="tab active" data-tab="main" onclick="switchTab('main')">Main Games</div>
+        <div class="tab" data-tab="custom" onclick="switchTab('custom')">Custom</div>
+        <div class="tab" data-tab="multiplayer" onclick="switchTab('multiplayer')">Multi</div>
+      </div>
+
+      <div id="search-wrap">
+        <input id="search" type="text" placeholder="Filter games…" oninput="filterGames(this.value)">
+      </div>
+
+      <!-- Drop zone (custom tab only) -->
+      <div id="drop-zone" onclick="document.getElementById('file-input').click()">
+        <div class="dz-icon">↑</div>
+        Drop .rbxl here or click to upload<br>
+        <span style="font-size:10px;color:#333">Saved locally in your browser</span>
+      </div>
+      <input id="file-input" type="file" accept=".rbxl" multiple>
+
+      <div id="game-list"><div id="list-state">Loading…</div></div>
+
+      <!-- Multiplayer join panel (shown when Multi tab is active) -->
+      <div id="mp-panel">
+        <div>
+          <div class="mp-label">Bridge address</div>
+          <input id="mp-server" class="mp-input" type="text"
+                 value="ws://localhost:9000"
+                 placeholder="ws://host:9000">
+        </div>
+        <div>
+          <div class="mp-label">Player name</div>
+          <input id="mp-name" class="mp-input" type="text"
+                 value="Player"
+                 placeholder="Player">
+        </div>
+        <div>
+          <div class="mp-label">User ID</div>
+          <input id="mp-uid" class="mp-input" type="number"
+                 value="1" min="1"
+                 placeholder="1">
+        </div>
+        <div>
+          <div class="mp-label">RCCService port (UDP)</div>
+          <input id="mp-rccport" class="mp-input" type="number"
+                 value="53640" min="1" max="65535"
+                 placeholder="53640">
+        </div>
+        <button id="mp-join-btn" onclick="joinMultiplayer()">Join Game</button>
+        <div id="mp-status"></div>
+        <hr class="mp-divider">
+        <div class="mp-hint">
+          <b>Setup:</b><br>
+          1. Build &amp; start RCCService on the server machine.<br>
+          2. Run: <code>python ws_bridge.py --server host:53640</code><br>
+          3. Enter the bridge address above and click Join.
+        </div>
+      </div>
+    </div>
+
+    <!-- Canvas area -->
+    <div id="main">
+      <div id="canvas-wrap">
+        <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1" width="800" height="600"></canvas>
+
+        <div id="load-bar"><div id="load-bar-fill"></div></div>
+
+        <div id="canvas-status">
+          <div id="cs-title">ROBLOX</div>
+          <div class="cs-spinner"></div>
+          <div id="cs-msg">Starting engine…</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div id="bottombar">
+    <div id="bb-status">Ready</div>
+    <button class="bb-btn" onclick="toggleConsole()">Console</button>
+  </div>
+
+  <!-- Console panel -->
+  <div id="console-panel"></div>
+
+  <script>
+  // ═══════════════════════════════════════════════════════════════════════
+  // State
+  // ═══════════════════════════════════════════════════════════════════════
+  var moduleReady  = false;
+  var currentTab   = 'main';
+  var allGames     = { main: [], custom: [] };
+  var activeItem   = null;
+  var filterText   = '';
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // IndexedDB for custom games
+  // ═══════════════════════════════════════════════════════════════════════
+  var DB_NAME    = 'rbxl_custom';
+  var DB_VERSION = 1;
+  var DB_STORE   = 'games';
+  var db = null;
+
+  function openDB() {
+    return new Promise(function(resolve, reject) {
+      var req = indexedDB.open(DB_NAME, DB_VERSION);
+      req.onupgradeneeded = function(e) {
+        e.target.result.createObjectStore(DB_STORE, {keyPath:'name'});
+      };
+      req.onsuccess = function(e) { resolve(e.target.result); };
+      req.onerror   = function(e) { reject(e.target.error); };
+    });
+  }
+
+  function dbSaveGame(name, buffer) {
+    return new Promise(function(resolve, reject) {
+      var tx   = db.transaction(DB_STORE, 'readwrite');
+      var store = tx.objectStore(DB_STORE);
+      store.put({name: name, data: buffer, ts: Date.now()});
+      tx.oncomplete = resolve;
+      tx.onerror    = function(e) { reject(e.target.error); };
+    });
+  }
+
+  function dbDeleteGame(name) {
+    return new Promise(function(resolve, reject) {
+      var tx   = db.transaction(DB_STORE, 'readwrite');
+      tx.objectStore(DB_STORE).delete(name);
+      tx.oncomplete = resolve;
+      tx.onerror    = function(e) { reject(e.target.error); };
+    });
+  }
+
+  function dbLoadAll() {
+    return new Promise(function(resolve, reject) {
+      var tx = db.transaction(DB_STORE, 'readonly');
+      var req = tx.objectStore(DB_STORE).getAll();
+      req.onsuccess = function(e) { resolve(e.target.result); };
+      req.onerror   = function(e) { reject(e.target.error); };
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // Tab switching
+  // ═══════════════════════════════════════════════════════════════════════
+  function switchTab(tab) {
+    currentTab = tab;
+    document.querySelectorAll('.tab').forEach(function(t) {
+      t.classList.toggle('active', t.dataset.tab === tab);
+    });
+
+    var isMulti = tab === 'multiplayer';
+    var mpPanel  = document.getElementById('mp-panel');
+    var gameList = document.getElementById('game-list');
+    var searchWrap = document.getElementById('search-wrap');
+    var dz       = document.getElementById('drop-zone');
+
+    mpPanel.classList.toggle('visible', isMulti);
+    gameList.style.display   = isMulti ? 'none' : '';
+    searchWrap.style.display = isMulti ? 'none' : '';
+    dz.style.display = (!isMulti && tab === 'custom') ? 'block' : 'none';
+
+    if (!isMulti) {
+      document.getElementById('search').value = '';
+      filterText = '';
+      renderList();
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // Game list rendering
+  // ═══════════════════════════════════════════════════════════════════════
+  function renderList() {
+    var list = document.getElementById('game-list');
+    var games = allGames[currentTab];
+    var query = filterText.toLowerCase().trim();
+    var filtered = query
+      ? games.filter(function(g) { return g.name.toLowerCase().includes(query); })
+      : games;
+
+    if (filtered.length === 0) {
+      var msg = currentTab === 'custom'
+        ? 'No custom games yet.<br>Upload an .rbxl file above.'
+        : (allGames.main.length === 0 ? 'Loading games…' : 'No matches for "' + filterText + '"');
+      list.innerHTML = '<div id="list-state">' + msg + '</div>';
+      return;
+    }
+
+    list.innerHTML = '';
+    filtered.forEach(function(g) {
+      var item = document.createElement('div');
+      item.className = 'game-item';
+      item.dataset.name = g.name;
+
+      var label = g.name.replace(/\.rbxl$/i, '');
+      var sub   = g.path ? g.path.replace(/\/[^/]+$/, '') || 'root' : (currentTab === 'custom' ? 'custom upload' : '');
+
+      var delBtn = currentTab === 'custom'
+        ? '<button class="gi-del" title="Delete" onclick="deleteCustomGame(event,\'' + escapeAttr(g.name) + '\')">×</button>'
+        : '';
+
+      item.innerHTML =
+        '<div class="gi-icon">▶</div>' +
+        '<div class="gi-info">' +
+          '<div class="gi-name" title="' + escapeAttr(label) + '">' + escapeHtml(label) + '</div>' +
+          (sub ? '<div class="gi-sub">' + escapeHtml(sub) + '</div>' : '') +
+        '</div>' +
+        delBtn;
+
+      item.addEventListener('click', function(e) {
+        if (e.target.classList.contains('gi-del')) return;
+        setActive(item);
+        if (g.blobUrl) {
+          loadPlace(g.blobUrl, label);
+        } else {
+          loadPlace(g.url, label);
+        }
+      });
+
+      list.appendChild(item);
+    });
+  }
+
+  function setActive(item) {
+    if (activeItem) activeItem.classList.remove('active');
+    activeItem = item;
+    if (item) item.classList.add('active');
+  }
+
+  function filterGames(val) {
+    filterText = val;
+    renderList();
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+  function escapeAttr(s) {
+    return String(s).replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // Main Games — LuaGunsX/RobloxRBXLArchive (GitHub tree API, recursive)
+  // ═══════════════════════════════════════════════════════════════════════
+  var MAIN_OWNER  = 'IIIStatusIII';
+  var MAIN_REPO   = 'Roblox-Uncopylocked-Games';
+  var MAIN_BRANCH = 'main';
+
+  function loadMainGames() {
+    var treeUrl = 'https://api.github.com/repos/' + MAIN_OWNER + '/' + MAIN_REPO +
+                  '/git/trees/' + MAIN_BRANCH + '?recursive=1';
+    fetch(treeUrl)
+      .then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function(data) {
+        var files = (data.tree || []).filter(function(f) {
+          return f.type === 'blob' && /\.rbxl$/i.test(f.path);
+        });
+        allGames.main = files.map(function(f) {
+          var name = f.path.split('/').pop();
+          return {
+            name: name,
+            path: f.path,
+            url: 'https://raw.githubusercontent.com/' + MAIN_OWNER + '/' +
+                 MAIN_REPO + '/' + MAIN_BRANCH + '/' + f.path.split('/').map(encodeURIComponent).join('/')
+          };
+        });
+        allGames.main.sort(function(a, b) { return a.name.localeCompare(b.name); });
+        if (currentTab === 'main') renderList();
+      })
+      .catch(function(e) {
+        console.error('Main games fetch error:', e);
+        fetch('https://api.github.com/repos/' + MAIN_OWNER + '/' + MAIN_REPO + '/contents/')
+          .then(function(r) { return r.json(); })
+          .then(function(files) {
+            allGames.main = files
+              .filter(function(f) { return f.type === 'file' && /\.rbxl$/i.test(f.name); })
+              .map(function(f) { return {name:f.name, path:f.name, url:'https://raw.githubusercontent.com/'+MAIN_OWNER+'/'+MAIN_REPO+'/'+MAIN_BRANCH+'/'+encodeURIComponent(f.name)}; });
+            if (currentTab === 'main') renderList();
+          })
+          .catch(function() {
+            if (currentTab === 'main')
+              document.getElementById('game-list').innerHTML =
+                '<div id="list-state">Failed to load game list.</div>';
+          });
+      });
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // Custom Games — IndexedDB + user repo (LucidX190/rbxls)
+  // ═══════════════════════════════════════════════════════════════════════
+  var CUSTOM_OWNER  = 'LucidX190';
+  var CUSTOM_REPO   = 'rbxls';
+  var CUSTOM_BRANCH = 'main';
+
+  function loadCustomGames() {
+    fetch('https://api.github.com/repos/' + CUSTOM_OWNER + '/' + CUSTOM_REPO + '/contents/')
+      .then(function(r) { return r.ok ? r.json() : []; })
+      .then(function(files) {
+        var repoGames = (files || [])
+          .filter(function(f) { return f.type==='file' && /\.rbxl$/i.test(f.name); })
+          .map(function(f) {
+            return {
+              name: f.name, path: f.name,
+              url: 'https://cdn.jsdelivr.net/gh/' + CUSTOM_OWNER + '/' + CUSTOM_REPO +
+                   '@' + CUSTOM_BRANCH + '/' + encodeURIComponent(f.name)
+            };
+          });
+        mergeCustom(repoGames);
+      })
+      .catch(function() { mergeCustom([]); });
+
+    dbLoadAll().then(function(entries) {
+      var dbGames = entries.map(function(e) {
+        var blobUrl = URL.createObjectURL(new Blob([e.data]));
+        return {name: e.name, path: null, blobUrl: blobUrl, fromDB: true};
+      });
+      mergeCustomDB(dbGames);
+    }).catch(function() {});
+  }
+
+  var _repoCustom = null;
+  var _dbCustom   = null;
+
+  function mergeCustom(games) {
+    _repoCustom = games;
+    if (_dbCustom !== null) finalizeCustom();
+  }
+  function mergeCustomDB(games) {
+    _dbCustom = games;
+    if (_repoCustom !== null) finalizeCustom();
+  }
+  function finalizeCustom() {
+    var combined = (_repoCustom || []).concat(_dbCustom || []);
+    combined.sort(function(a,b) { return a.name.localeCompare(b.name); });
+    allGames.custom = combined;
+    if (currentTab === 'custom') renderList();
+  }
+
+  function deleteCustomGame(e, name) {
+    e.stopPropagation();
+    dbDeleteGame(name).then(function() {
+      allGames.custom = allGames.custom.filter(function(g) { return g.name !== name; });
+      renderList();
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // File upload (drag & drop + file picker)
+  // ═══════════════════════════════════════════════════════════════════════
+  function handleFiles(fileList) {
+    Array.from(fileList).forEach(function(file) {
+      if (!/\.rbxl$/i.test(file.name)) return;
+      var reader = new FileReader();
+      reader.onload = function(ev) {
+        var buf = ev.target.result;
+        dbSaveGame(file.name, buf).then(function() {
+          var blobUrl = URL.createObjectURL(new Blob([buf]));
+          allGames.custom = allGames.custom.filter(function(g) { return g.name !== file.name; });
+          allGames.custom.push({name: file.name, path: null, blobUrl: blobUrl, fromDB: true});
+          allGames.custom.sort(function(a,b) { return a.name.localeCompare(b.name); });
+          if (currentTab === 'custom') renderList();
+        });
+      };
+      reader.readAsArrayBuffer(file);
+    });
+  }
+
+  var dropZone = document.getElementById('drop-zone');
+  dropZone.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    dropZone.classList.add('hover');
+  });
+  dropZone.addEventListener('dragleave', function() { dropZone.classList.remove('hover'); });
+  dropZone.addEventListener('drop', function(e) {
+    e.preventDefault();
+    dropZone.classList.remove('hover');
+    handleFiles(e.dataTransfer.files);
+  });
+
+  document.getElementById('sidebar').addEventListener('dragover', function(e) {
+    if (currentTab === 'custom') { e.preventDefault(); dropZone.classList.add('hover'); }
+  });
+  document.getElementById('sidebar').addEventListener('dragleave', function() {
+    dropZone.classList.remove('hover');
+  });
+  document.getElementById('sidebar').addEventListener('drop', function(e) {
+    if (currentTab !== 'custom') return;
+    e.preventDefault();
+    dropZone.classList.remove('hover');
+    handleFiles(e.dataTransfer.files);
+  });
+
+  document.getElementById('file-input').addEventListener('change', function(e) {
+    handleFiles(e.target.files);
+    e.target.value = '';
+  });
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // Game loading
+  // ═══════════════════════════════════════════════════════════════════════
+  var pendingLoad = null;
+
+  function loadPlace(url, name) {
+    setStatus('Loading ' + name + '…');
+    if (!moduleReady) {
+      pendingLoad = {url: url, name: name};
+      return;
+    }
+    doLoad(url, name);
+  }
+
+  function doLoad(url, name) {
+    setStatus('Loading ' + name + '…');
+    try {
+      Module.ccall('loadPlaceFromUrl', null, ['string'], [url]);
+    } catch(e) {
+      setStatus('Error: ' + e.message);
+      console.error(e);
+    }
+  }
+
+  function setStatus(msg) {
+    document.getElementById('topbar-status').textContent = msg;
+    document.getElementById('bb-status').textContent = msg;
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // Console
+  // ═══════════════════════════════════════════════════════════════════════
+  function toggleConsole() {
+    document.getElementById('console-panel').classList.toggle('visible');
+  }
+
+  function appendLog(text, isErr) {
+    var panel = document.getElementById('console-panel');
+    var line  = document.createElement('div');
+    line.className = 'cl' + (isErr ? ' err' : '');
+    line.textContent = text;
+    panel.appendChild(line);
+    panel.scrollTop = panel.scrollHeight;
+  }
+
+  function requestFullscreen() {
+    if (typeof Module !== 'undefined' && Module.requestFullscreen) {
+      try { Module.requestFullscreen(true, true); return; } catch(e) {}
+    }
+    var el = document.getElementById('canvas-wrap');
+    if (el.requestFullscreen) el.requestFullscreen();
+    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+  }
+
+  document.addEventListener('pointerlockchange', function() {
+    if (!document.pointerLockElement && moduleReady) {
+      document.getElementById('canvas').focus();
+    }
+  });
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // Emscripten Module
+  // ═══════════════════════════════════════════════════════════════════════
+  var Module = {
+    canvas: (function() {
+      var c = document.getElementById('canvas');
+      c.addEventListener('webglcontextlost', function(e) {
+        e.preventDefault();
+        setStatus('WebGL context lost — reload required');
+      });
+      return c;
+    })(),
+
+    // Redirect .data requests to the pre-assembled blob URL from split CDN parts
+    locateFile: function(path, prefix) {
+      if (path.endsWith('.data') && window.__dataUrl) return window.__dataUrl;
+      return (prefix || '') + path;
+    },
+
+    setStatus: function(text) {
+      var fill = document.getElementById('load-bar-fill');
+      if (!text) {
+        document.getElementById('canvas-status').classList.add('hidden');
+        fill.style.width = '100%';
+        setStatus('Running');
+        return;
+      }
+      document.getElementById('cs-msg').textContent = text;
+      setStatus(text);
+      var m = text.match(/\((\d+)\/(\d+)\)/);
+      if (m) fill.style.width = Math.round(100 * +m[1] / +m[2]) + '%';
+    },
+
+    print: function(text) {
+      appendLog(text, false);
+      console.log(text);
+    },
+
+    printErr: function(text) {
+      appendLog(text, true);
+      console.error(text);
+    },
+
+    totalDependencies: 0,
+    monitorRunDependencies: function(left) {
+      this.totalDependencies = Math.max(this.totalDependencies, left);
+      var done = this.totalDependencies - left;
+      Module.setStatus(left
+        ? 'Downloading… (' + done + '/' + this.totalDependencies + ')'
+        : 'Finalizing…');
+    },
+
+    onRuntimeInitialized: function() {
+      Module.setStatus('');
+      moduleReady = true;
+      setStatus('Engine ready — select a game');
+      if (pendingLoad) {
+        var p = pendingLoad;
+        pendingLoad = null;
+        doLoad(p.url, p.name);
+      }
+    }
+  };
+
+  window.onerror = function(msg, _u, _l, _c, err) {
+    setStatus('JS error: ' + msg);
+    appendLog('JS error: ' + msg + (err ? '\n' + err.stack : ''), true);
+  };
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // Multiplayer join
+  // ═══════════════════════════════════════════════════════════════════════
+  function setMpStatus(msg, cls) {
+    var el = document.getElementById('mp-status');
+    el.textContent = msg;
+    el.className   = cls || '';
+  }
+
+  function joinMultiplayer() {
+    if (!moduleReady) {
+      setMpStatus('Engine not ready yet — wait for it to finish loading.', 'err');
+      return;
+    }
+
+    var wsAddr  = document.getElementById('mp-server').value.trim();
+    var name    = document.getElementById('mp-name').value.trim() || 'Player';
+    var uid     = parseInt(document.getElementById('mp-uid').value, 10) || 1;
+    var rccPort = parseInt(document.getElementById('mp-rccport').value, 10) || 53640;
+
+    if (!wsAddr) {
+      setMpStatus('Enter a bridge address (e.g. ws://localhost:9000).', 'err');
+      return;
+    }
+
+    var args = JSON.stringify({
+      WebSocketAddress:    wsAddr,
+      MachineAddress:      '127.0.0.1',
+      ServerPort:          rccPort,
+      ClientPort:          0,
+      UserId:              uid,
+      UserName:            name,
+      ClientTicket:        '',
+      PlaceId:             0,
+      GameId:              '',
+      UniverseId:          0,
+      BaseUrl:             'https://www.roblox.com',
+      MembershipType:      'NonBCOneTime',
+      AccountAge:          100,
+      CharacterAppearance: '',
+      FollowUserId:        0,
+      CreatorTypeEnum:     'User',
+      CreatorId:           uid,
+      ChatStyle:           'ClassicAndBubble',
+      SuperSafeChat:       false,
+      IsUnknownOrUnder13:  false
+    });
+
+    setMpStatus('Connecting to ' + wsAddr + '…');
+    document.getElementById('mp-join-btn').disabled = true;
+
+    try {
+      Module.ccall('joinMultiplayerGame', null, ['string'], [args]);
+      setMpStatus('Join sent — waiting for server response…', 'ok');
+    } catch (e) {
+      setMpStatus('Error: ' + e.message, 'err');
+      document.getElementById('mp-join-btn').disabled = false;
+      return;
+    }
+
+    setTimeout(function() {
+      document.getElementById('mp-join-btn').disabled = false;
+    }, 10000);
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // Boot
+  // ═══════════════════════════════════════════════════════════════════════
+  openDB().then(function(d) {
+    db = d;
+    loadMainGames();
+    loadCustomGames();
+  }).catch(function(e) {
+    console.error('IndexedDB open failed:', e);
+    loadMainGames();
+    _dbCustom = [];
+    _repoCustom = _repoCustom || null;
+    loadCustomGames();
+  });
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       Dynamic split-data CDN loader
+       Fetches UniversalClient.data.001, .002, … from jsdelivr until 404,
+       concatenates them into a single blob, then loads UniversalClient.js.
+       Change BASE_URL if you move the files to a different repo/branch.
+  ════════════════════════════════════════════════════════════════════════ -->
+  <script>
+  (async function() {
+    var BASE_URL = 'https://cdn.jsdelivr.net/gh/LucidX190/projectpizzacomplete@main/web/';
+
+    var chunks = [];
+    var part = 1;
+
+    while (true) {
+      var num = String(part).padStart(3, '0');
+      var url = BASE_URL + 'UniversalClient.data.' + num;
+      Module.setStatus('Downloading data part ' + part + '…');
+      var r;
+      try { r = await fetch(url); } catch(e) { break; }
+      if (!r.ok) break;
+      chunks.push(new Uint8Array(await r.arrayBuffer()));
+      part++;
+    }
+
+    if (chunks.length === 0) {
+      Module.setStatus('Error: no data parts found. Check the CDN URL.');
+      console.error('No data parts found at', BASE_URL);
+      return;
+    }
+
+    Module.setStatus('Assembling ' + chunks.length + ' data parts…');
+    var total = 0;
+    for (var i = 0; i < chunks.length; i++) total += chunks[i].byteLength;
+    var merged = new Uint8Array(total);
+    var off = 0;
+    for (var i = 0; i < chunks.length; i++) {
+      merged.set(chunks[i], off);
+      off += chunks[i].byteLength;
+    }
+
+    window.__dataUrl = URL.createObjectURL(
+      new Blob([merged], {type: 'application/octet-stream'})
+    );
+
+    Module.setStatus('Loading engine…');
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = BASE_URL + 'UniversalClient.js';
+    document.body.appendChild(s);
+  })();
+  </script>
+
+</body>
+</html>
