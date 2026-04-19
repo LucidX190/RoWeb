@@ -468,6 +468,7 @@
     <div id="logo">ROBLOX <span>client</span></div>
     <div class="topbar-sep"></div>
     <div id="topbar-status">Initializing engine…</div>
+    <button class="tb-btn" id="bot-btn" onclick="spawnBot()" disabled title="Add a second player so 2-player games can start">+ Bot Player</button>
     <button class="tb-btn" onclick="requestFullscreen()">⛶ Fullscreen</button>
   </div>
 
@@ -920,6 +921,18 @@
     panel.scrollTop = panel.scrollHeight;
   }
 
+  function spawnBot() {
+    if (!moduleReady) return;
+    try {
+      Module.ccall('spawnBotPlayer', null, [], []);
+      setStatus('Bot player added — game should start');
+      document.getElementById('bot-btn').disabled = true;
+    } catch(e) {
+      setStatus('Bot error: ' + e.message);
+      console.error(e);
+    }
+  }
+
   function requestFullscreen() {
     if (typeof Module !== 'undefined' && Module.requestFullscreen) {
       try { Module.requestFullscreen(true, true); return; } catch(e) {}
@@ -990,6 +1003,7 @@
     onRuntimeInitialized: function() {
       Module.setStatus('');
       moduleReady = true;
+      document.getElementById('bot-btn').disabled = false;
       setStatus('Engine ready — select a game');
       if (pendingLoad) {
         var p = pendingLoad;
