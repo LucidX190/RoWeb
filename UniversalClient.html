@@ -456,10 +456,12 @@ self.addEventListener("fetch", function(ev) {
   }));
 });`;
     if (!self.crossOriginIsolated && 'serviceWorker' in navigator) {
-      var blob = new Blob([sw], {type:'text/javascript'});
-      navigator.serviceWorker.register(URL.createObjectURL(blob)).then(function(reg) {
-        if (!reg.active) location.reload();
-      });
+      try {
+        var blob = new Blob([sw], {type:'text/javascript'});
+        navigator.serviceWorker.register(URL.createObjectURL(blob)).then(function(reg) {
+          if (!reg.active) location.reload();
+        });
+      } catch(e) { console.warn('COI SW registration skipped:', e); }
     }
   })();
   </script>
@@ -1096,7 +1098,7 @@ self.addEventListener("fetch", function(ev) {
   ════════════════════════════════════════════════════════════════════════ -->
   <script>
   (async function() {
-    var BASE_URL = 'https://cdn.jsdelivr.net/gh/LucidX190/projectpizzacomplete@main/web/';
+    var BASE_URL = 'https://cdn.jsdelivr.net/gh/LucidX190/RoWeb@master/';
 
     var chunks = [];
     var part = 1;
