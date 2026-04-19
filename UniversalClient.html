@@ -468,6 +468,7 @@
     <div id="logo">ROBLOX <span>client</span></div>
     <div class="topbar-sep"></div>
     <div id="topbar-status">Initializing engine…</div>
+    <button class="tb-btn" id="bot-btn" onclick="reloadSolo()" disabled title="Reload the current game with 2-player requirements removed">+ Bot Player</button>
     <button class="tb-btn" onclick="requestFullscreen()">⛶ Fullscreen</button>
   </div>
 
@@ -879,6 +880,13 @@
   // Game loading
   // ═══════════════════════════════════════════════════════════════════════
   var pendingLoad = null;
+  var currentGameUrl  = null;
+  var currentGameName = null;
+
+  function reloadSolo() {
+    if (!currentGameUrl) { setStatus('Load a game first.'); return; }
+    doLoadWithPatch(currentGameUrl, currentGameName);
+  }
 
   function loadPlace(url, name) {
     setStatus('Loading ' + name + '…');
@@ -892,6 +900,8 @@
   // Fetch the .rbxl, patch 2-player lobby gates so they work in solo, then
   // hand a blob URL to the engine.  Blob / local URLs skip the fetch entirely.
   async function doLoadWithPatch(url, name) {
+    currentGameUrl  = url;
+    currentGameName = name;
     if (url.startsWith('blob:') || !url.startsWith('http')) {
       doLoad(url, name);
       return;
@@ -1035,6 +1045,7 @@
     onRuntimeInitialized: function() {
       Module.setStatus('');
       moduleReady = true;
+      document.getElementById('bot-btn').disabled = false;
       setStatus('Engine ready — select a game');
       if (pendingLoad) {
         var p = pendingLoad;
