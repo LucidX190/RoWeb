@@ -101,7 +101,7 @@ if (ENVIRONMENT_IS_NODE) {
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: C:\Users\Lucid\AppData\Local\Temp\tmp7ydageko.js
+// include: C:\Users\Lucid\AppData\Local\Temp\tmps4ecyusl.js
 Module["expectedDataFileDownloads"] ??= 0;
 
 Module["expectedDataFileDownloads"]++;
@@ -4231,23 +4231,23 @@ Module["expectedDataFileDownloads"]++;
   });
 })();
 
-// end include: C:\Users\Lucid\AppData\Local\Temp\tmp7ydageko.js
-// include: C:\Users\Lucid\AppData\Local\Temp\tmpkhyu8_jc.js
+// end include: C:\Users\Lucid\AppData\Local\Temp\tmps4ecyusl.js
+// include: C:\Users\Lucid\AppData\Local\Temp\tmpik7cs_86.js
 // All the pre-js content up to here must remain later on, we need to run
 // it.
 if (Module["$ww"] || (typeof ENVIRONMENT_IS_PTHREAD != "undefined" && ENVIRONMENT_IS_PTHREAD)) Module["preRun"] = [];
 
 var necessaryPreJSTasks = Module["preRun"].slice();
 
-// end include: C:\Users\Lucid\AppData\Local\Temp\tmpkhyu8_jc.js
-// include: C:\Users\Lucid\AppData\Local\Temp\tmpjjpttgm8.js
+// end include: C:\Users\Lucid\AppData\Local\Temp\tmpik7cs_86.js
+// include: C:\Users\Lucid\AppData\Local\Temp\tmpugt_1us1.js
 if (!Module["preRun"]) throw "Module.preRun should exist because file support used it; did a pre-js delete it?";
 
 necessaryPreJSTasks.forEach(task => {
   if (Module["preRun"].indexOf(task) < 0) throw "All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?";
 });
 
-// end include: C:\Users\Lucid\AppData\Local\Temp\tmpjjpttgm8.js
+// end include: C:\Users\Lucid\AppData\Local\Temp\tmpugt_1us1.js
 // Sometimes an existing Module object exists with properties
 // meant to overwrite the default module functionality. Here
 // we collect those properties and reapply _after_ we configure
@@ -5306,7 +5306,7 @@ function dbg(...args) {
 // end include: runtime_debug.js
 // === Body ===
 var ASM_CONSTS = {
-  4071416: $0 => {
+  4071512: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -5314,7 +5314,7 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  4071641: () => {
+  4071737: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -5322,7 +5322,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  4071788: () => {
+  4071884: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -5330,7 +5330,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  4072022: $0 => {
+  4072118: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -5354,11 +5354,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  4072574: () => {
+  4072670: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  4072642: ($0, $1, $2, $3) => {
+  4072738: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -5400,7 +5400,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  4074335: ($0, $1, $2, $3) => {
+  4074431: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -5432,7 +5432,7 @@ var ASM_CONSTS = {
       SDL2.audio.silenceTimer = setInterval(silence_callback, ($1 / SDL2.audioContext.sampleRate) * 1e3);
     }
   },
-  4075510: ($0, $1) => {
+  4075606: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -5451,7 +5451,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  4076115: ($0, $1) => {
+  4076211: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var buf = $0 >>> 2;
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
@@ -5465,7 +5465,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  4076604: $0 => {
+  4076700: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -5499,7 +5499,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  4077610: ($0, $1, $2) => {
+  4077706: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -5570,7 +5570,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  4079078: ($0, $1, $2, $3, $4) => {
+  4079174: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -5607,18 +5607,18 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  4080066: $0 => {
+  4080162: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  4080149: () => {
+  4080245: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  4080218: () => window.innerWidth,
-  4080248: () => window.innerHeight
+  4080314: () => window.innerWidth,
+  4080344: () => window.innerHeight
 };
 
 // end include: preamble.js
@@ -19256,6 +19256,8 @@ var _notifyPointerLockLost = Module["_notifyPointerLockLost"] = createExportWrap
 var _loadPlaceFromUrl = Module["_loadPlaceFromUrl"] = createExportWrapper("loadPlaceFromUrl", 1);
 
 var _joinMultiplayerGame = Module["_joinMultiplayerGame"] = createExportWrapper("joinMultiplayerGame", 1);
+
+var _spawnBotPlayer = Module["_spawnBotPlayer"] = createExportWrapper("spawnBotPlayer", 0);
 
 var _main = Module["_main"] = createExportWrapper("__main_argc_argv", 2);
 
