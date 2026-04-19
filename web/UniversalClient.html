@@ -439,29 +439,26 @@
 
   </style>
 
-  <!-- COI service worker for SharedArrayBuffer / pthreads -->
+  <!-- COI service worker — registers coi-sw.js to add COOP/COEP headers -->
   <script>
-  (function(){
-    var sw = `
-self.addEventListener("install", () => self.skipWaiting());
-self.addEventListener("activate", e => e.waitUntil(self.clients.claim()));
-self.addEventListener("fetch", function(ev) {
-  if (ev.request.cache === "only-if-cached" && ev.request.mode !== "same-origin") return;
-  ev.respondWith(fetch(ev.request).then(function(r) {
-    if (r.status === 0) return r;
-    var h = new Headers(r.headers);
-    h.set("Cross-Origin-Opener-Policy","same-origin");
-    h.set("Cross-Origin-Embedder-Policy","require-corp");
-    return new Response(r.body, {status:r.status,statusText:r.statusText,headers:h});
-  }));
-});`;
-    if (!self.crossOriginIsolated && 'serviceWorker' in navigator) {
-      var blob = new Blob([sw], {type:'text/javascript'});
-      navigator.serviceWorker.register(URL.createObjectURL(blob)).then(function(reg) {
-        if (!reg.active) location.reload();
-      });
+  if (!self.crossOriginIsolated && 'serviceWorker' in navigator) {
+    // ?coi-sw param is the loop guard: if we already reloaded and are still not
+    // isolated, the SW can't help — log a warning and don't loop.
+    var _coiParams = new URLSearchParams(location.search);
+    if (_coiParams.has('coi-sw')) {
+      console.warn('[COI] SW is active but crossOriginIsolated is still false. ' +
+        'Check that the server sends COOP/COEP headers (see _headers file).');
+    } else {
+      navigator.serviceWorker.register('./coi-sw.js')
+        .then(function() { return navigator.serviceWorker.ready; })
+        .then(function() {
+          // SW is fully active — reload so it can intercept the navigation.
+          _coiParams.set('coi-sw', '');
+          location.search = _coiParams.toString();
+        })
+        .catch(function(e) { console.warn('[COI] SW registration failed:', e); });
     }
-  })();
+  }
   </script>
 </head>
 <body>
@@ -471,6 +468,7 @@ self.addEventListener("fetch", function(ev) {
     <div id="logo">ROBLOX <span>client</span></div>
     <div class="topbar-sep"></div>
     <div id="topbar-status">Initializing engine…</div>
+    <button class="tb-btn" id="bot-btn" onclick="reloadSolo()" disabled title="Reload the current game with 2-player requirements removed">+ Bot Player</button>
     <button class="tb-btn" onclick="requestFullscreen()">⛶ Fullscreen</button>
   </div>
 
@@ -882,6 +880,19 @@ self.addEventListener("fetch", function(ev) {
   // Game loading
   // ═══════════════════════════════════════════════════════════════════════
   var pendingLoad = null;
+  var currentGameUrl  = null;
+  var currentGameName = null;
+
+  function reloadSolo() {
+    if (!moduleReady) return;
+    try {
+      Module.ccall('spawnBotPlayer', null, [], []);
+      setStatus('Bot player added');
+    } catch(e) {
+      setStatus('Bot needs rebuild — run build_web.bat then re-upload UniversalClient.js + .wasm');
+      console.warn('[Bot] spawnBotPlayer not exported yet — rebuild required:', e.message);
+    }
+  }
 
   function loadPlace(url, name) {
     setStatus('Loading ' + name + '…');
@@ -889,6 +900,12 @@ self.addEventListener("fetch", function(ev) {
       pendingLoad = {url: url, name: name};
       return;
     }
+    doLoadWithPatch(url, name);
+  }
+
+  function doLoadWithPatch(url, name) {
+    currentGameUrl  = url;
+    currentGameName = name;
     doLoad(url, name);
   }
 
@@ -993,11 +1010,12 @@ self.addEventListener("fetch", function(ev) {
     onRuntimeInitialized: function() {
       Module.setStatus('');
       moduleReady = true;
+      document.getElementById('bot-btn').disabled = false;
       setStatus('Engine ready — select a game');
       if (pendingLoad) {
         var p = pendingLoad;
         pendingLoad = null;
-        doLoad(p.url, p.name);
+        doLoadWithPatch(p.url, p.name);
       }
     }
   };
@@ -1090,24 +1108,45 @@ self.addEventListener("fetch", function(ev) {
 
   <!-- ═══════════════════════════════════════════════════════════════════
        Dynamic split-data CDN loader
-       Fetches UniversalClient.data.001, .002, … from jsdelivr until 404,
-       concatenates them into a single blob, then loads UniversalClient.js.
-       Change BASE_URL if you move the files to a different repo/branch.
+       Fetches UniversalClient.data.001, .002, … from raw.githubusercontent.com
+       until 404, concatenates into a single blob, then loads UniversalClient.js.
+       Parts are cached in the browser (Cache API) so subsequent loads are instant.
+       Bump CACHE_NAME (e.g. v2, v3) after uploading a new build to bust the cache.
   ════════════════════════════════════════════════════════════════════════ -->
   <script>
   (async function() {
-    var BASE_URL = 'https://cdn.jsdelivr.net/gh/LucidX190/projectpizzacomplete@main/web/';
+    var BASE_URL   = 'https://raw.githubusercontent.com/LucidX190/RoWeb/master/';
+    var CACHE_NAME = 'uc-data-v1';
+
+    // Open the cache (falls back to plain fetch if Cache API is unavailable)
+    var cache = null;
+    try { cache = await caches.open(CACHE_NAME); } catch(e) {}
 
     var chunks = [];
     var part = 1;
+    var cachedCount = 0;
 
     while (true) {
       var num = String(part).padStart(3, '0');
       var url = BASE_URL + 'UniversalClient.data.' + num;
-      Module.setStatus('Downloading data part ' + part + '…');
-      var r;
-      try { r = await fetch(url); } catch(e) { break; }
-      if (!r.ok) break;
+      var r = null;
+
+      // Try the cache first
+      if (cache) {
+        r = await cache.match(url);
+        if (r) cachedCount++;
+      }
+
+      // Not cached — fetch from network and store
+      if (!r) {
+        Module.setStatus('Downloading part ' + part + '…');
+        try { r = await fetch(url); } catch(e) { break; }
+        if (!r.ok) break;
+        if (cache) await cache.put(url, r.clone());
+      } else {
+        Module.setStatus('Loading part ' + part + ' (cached)…');
+      }
+
       chunks.push(new Uint8Array(await r.arrayBuffer()));
       part++;
     }
@@ -1135,7 +1174,7 @@ self.addEventListener("fetch", function(ev) {
     Module.setStatus('Loading engine…');
     var s = document.createElement('script');
     s.async = true;
-    s.src = BASE_URL + 'UniversalClient.js';
+    s.src = './UniversalClient.js';
     document.body.appendChild(s);
   })();
   </script>

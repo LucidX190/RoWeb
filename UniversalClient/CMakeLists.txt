@@ -83,22 +83,24 @@ elseif(EMSCRIPTEN)
         "-Wl,--no-check-features"
         "-sFULL_ES3=1"
         "-sEXPORTED_RUNTIME_METHODS=ccall,cwrap,setValue,getValue"
+        "-sEXPORTED_FUNCTIONS=_main,_notifyPointerLockLost,_loadPlaceFromUrl,_spawnBotPlayer"
         "-sALLOW_MEMORY_GROWTH=1"
         "-sSTACK_SIZE=1048576"
         "-sINITIAL_MEMORY=536870912"
-        "-sASYNCIFY=1"
         "-sMAX_WEBGL_VERSION=2"
-        "-sPTHREAD_POOL_SIZE=100"
+        "-sPTHREAD_POOL_SIZE=128"
+        "--shell-file=${CMAKE_SOURCE_DIR}/shell.html"
+        "-O0"
     )
 
-    if(NOT DEFINED FMOD_ROOT)
-        message(FATAL_ERROR "FMOD_ROOT is not defined")
+    if(FMOD_USE_STUB)
+        target_link_libraries(UniversalClient PRIVATE fmod_stub_lib "-lembind")
+    else()
+        target_link_libraries(UniversalClient PRIVATE
+            "${FMOD_ROOT}/lib/w32/fmodP_wasm.a"
+            "-lembind"
+        )
     endif()
-
-    target_link_libraries(UniversalClient PRIVATE
-        "${FMOD_ROOT}/lib/w32/fmodP_wasm.a"
-        "-lembind"
-    )
 elseif(UNIX)
     target_link_libraries(UniversalClient PRIVATE
         -lfmod
