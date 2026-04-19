@@ -439,32 +439,7 @@
 
   </style>
 
-  <!-- COI service worker for SharedArrayBuffer / pthreads -->
-  <script>
-  (function(){
-    var sw = `
-self.addEventListener("install", () => self.skipWaiting());
-self.addEventListener("activate", e => e.waitUntil(self.clients.claim()));
-self.addEventListener("fetch", function(ev) {
-  if (ev.request.cache === "only-if-cached" && ev.request.mode !== "same-origin") return;
-  ev.respondWith(fetch(ev.request).then(function(r) {
-    if (r.status === 0) return r;
-    var h = new Headers(r.headers);
-    h.set("Cross-Origin-Opener-Policy","same-origin");
-    h.set("Cross-Origin-Embedder-Policy","require-corp");
-    return new Response(r.body, {status:r.status,statusText:r.statusText,headers:h});
-  }));
-});`;
-    if (!self.crossOriginIsolated && 'serviceWorker' in navigator) {
-      try {
-        var blob = new Blob([sw], {type:'text/javascript'});
-        navigator.serviceWorker.register(URL.createObjectURL(blob)).then(function(reg) {
-          if (!reg.active) location.reload();
-        });
-      } catch(e) { console.warn('COI SW registration skipped:', e); }
-    }
-  })();
-  </script>
+  <!-- GitHub Pages sends COOP/COEP headers natively — no SW needed -->
 </head>
 <body>
 
@@ -1098,7 +1073,7 @@ self.addEventListener("fetch", function(ev) {
   ════════════════════════════════════════════════════════════════════════ -->
   <script>
   (async function() {
-    var BASE_URL = 'https://cdn.jsdelivr.net/gh/LucidX190/RoWeb@master/';
+    var BASE_URL = 'https://raw.githubusercontent.com/LucidX190/RoWeb/master/';
 
     var chunks = [];
     var part = 1;
