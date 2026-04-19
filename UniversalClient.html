@@ -897,91 +897,10 @@
     doLoadWithPatch(url, name);
   }
 
-  // Inject a Script into the .rbxl XML that creates a bot Player at runtime.
-  // The bot appears on the leaderboard, bumps NumPlayers, and spawns a character.
-  function injectBotScript(text) {
-    var lua = [
-      'wait(1)',
-      'local ok, err = pcall(function()',
-      '    local P = game:GetService("Players")',
-      '    if P.NumPlayers >= 2 then return end',
-      '    local bot = Instance.new("Player")',
-      '    bot.Name = "Player"',   // triggers auto-userId assignment in solo mode
-      '    bot.Parent = P',
-      '    wait(0.5)',
-      '    pcall(function() bot:LoadCharacter() end)',
-      'end)',
-      'if not ok then print("[Bot]", tostring(err)) end'
-    ].join('\n');
-    // Escape XML special chars in source (&, <)
-    var src = lua.replace(/&/g, '&amp;').replace(/</g, '&lt;');
-    var block = [
-      '<Item class="Script" referent="__BOT001">',
-      '  <Properties>',
-      '    <string name="Name">__BotPlayer</string>',
-      '    <bool name="Disabled">false</bool>',
-      '    <ProtectedString name="Source">' + src + '</ProtectedString>',
-      '  </Properties>',
-      '</Item>'
-    ].join('\n');
-    // Inject as first child of Workspace (right after its </Properties>)
-    var wi = text.indexOf('<Item class="Workspace"');
-    if (wi === -1) wi = text.indexOf("<Item class='Workspace'");
-    if (wi !== -1) {
-      var pe = text.indexOf('</Properties>', wi);
-      if (pe !== -1) {
-        var at = pe + 13;
-        return text.slice(0, at) + '\n' + block + text.slice(at);
-      }
-    }
-    // Fallback: before </roblox>
-    return text.replace(/<\/roblox>$/, block + '\n</roblox>');
-  }
-
-  // Fetch the .rbxl, inject a bot player Script, patch any remaining
-  // NumPlayers gates as backup, then hand a blob URL to the engine.
-  // Blob / local URLs are loaded directly (already patched or user-uploaded).
-  async function doLoadWithPatch(url, name) {
+  function doLoadWithPatch(url, name) {
     currentGameUrl  = url;
     currentGameName = name;
-    if (url.startsWith('blob:') || !url.startsWith('http')) {
-      doLoad(url, name);
-      return;
-    }
-    setStatus('Fetching ' + name + '…');
-    try {
-      var r = await fetch(url);
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      var buf = await r.arrayBuffer();
-      var bytes = new Uint8Array(buf);
-
-      // Detect XML format: starts with '<' (0x3C) or UTF-8 BOM then '<'
-      var isXml = bytes[0] === 0x3C ||
-                  (bytes[0] === 0xEF && bytes[1] === 0xBB && bytes[2] === 0xBF && bytes[3] === 0x3C);
-
-      var blobData;
-      if (isXml) {
-        // XML format: safe to modify and reload from a blob URL
-        var text = new TextDecoder('utf-8').decode(buf);
-        text = injectBotScript(text);
-        text = text
-          .replace(/\bNumPlayers\s*<\s*([2-9]\d*)/g,  'NumPlayers < 1')
-          .replace(/\bnumPlayers\s*<\s*([2-9]\d*)/g,  'numPlayers < 1')
-          .replace(/\bNumPlayers\s*>=\s*([2-9]\d*)/g, 'NumPlayers >= 1')
-          .replace(/\bnumPlayers\s*>=\s*([2-9]\d*)/g, 'numPlayers >= 1')
-          .replace(/#\s*game\.Players:GetPlayers\(\)\s*<\s*([2-9]\d*)/g,  '#game.Players:GetPlayers() < 1')
-          .replace(/#\s*game\.Players:GetPlayers\(\)\s*>=\s*([2-9]\d*)/g, '#game.Players:GetPlayers() >= 1');
-        var blobUrl = URL.createObjectURL(new Blob([new TextEncoder().encode(text)]));
-        doLoad(blobUrl, name);
-      } else {
-        // Binary RBLX format: the C++ engine must fetch it directly over HTTP.
-        // Blob URLs created in JS aren't reachable by the WASM pthread fetch thread.
-        doLoad(url, name);
-      }
-    } catch(e) {
-      setStatus('Failed to fetch ' + name + ': ' + e.message);
-      console.error('[loadPlace]', e);
-    }
+    doLoad(url, name);
   }
 
   function doLoad(url, name) {
