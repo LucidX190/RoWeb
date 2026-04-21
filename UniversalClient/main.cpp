@@ -25,6 +25,7 @@
 #include "v8datamodel/PlayerScripts.h"
 #include "v8datamodel/ModelInstance.h"
 #include "script/script.h"
+#include "script/ScriptContext.h"
 #include "util/ProtectedString.h"
 #include "network/GameConfigurer.h"
 #include <fstream>
@@ -276,13 +277,25 @@ extern "C"
 				RBX::ServiceProvider::create<RBX::Network::Players>(taskDm);
 			if (!players || players->getNumPlayers() >= 2) return;
 
-			boost::shared_ptr<RBX::Network::Player> bot =
-				RBX::Creatable<RBX::Instance>::create<RBX::Network::Player>();
-			bot->setName("Player");
-			bot->setParent(players);
+			// Create the bot via Lua so Players.ChildAdded fires on the Lua side.
+			// Direct C++ setParent on Network::Player bypasses the Lua reflection layer
+			// and the leaderboard never sees the player.
+			RBX::ScriptContext* sc = RBX::ServiceProvider::create<RBX::ScriptContext>(taskDm);
+			if (!sc) return;
 
-			RBX::StandardOut::singleton()->printf(RBX::MESSAGE_INFO,
-				"[spawnBotPlayer] Bot added, NumPlayers=%d", players->getNumPlayers());
+			sc->executeInNewThread(
+				RBX::Security::RobloxGameScript_,
+				RBX::ProtectedString::fromTrustedSource(
+					"local Players = game:GetService('Players')\n"
+					"if #Players:GetPlayers() < 2 then\n"
+					"    local p = Instance.new('Player')\n"
+					"    p.Name = 'Bot'\n"
+					"    p.Parent = Players\n"
+					"    print('[spawnBotPlayer] Bot added via Lua, count=' .. #Players:GetPlayers())\n"
+					"end\n"
+				),
+				"SpawnBotPlayer"
+			);
 		}, RBX::DataModelJob::Write);
 	}
 }
