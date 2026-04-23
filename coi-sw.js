@@ -1,3 +1,6 @@
+// !! Set this to your Cloudflare Worker URL after deploying cf_worker.js !!
+var CF_WORKER = 'https://roweb-proxy.YOUR_SUBDOMAIN.workers.dev';
+
 self.addEventListener("install", () => self.skipWaiting());
 self.addEventListener("activate", e => e.waitUntil(self.clients.claim()));
 self.addEventListener("fetch", function(ev) {
@@ -5,20 +8,20 @@ self.addEventListener("fetch", function(ev) {
   if (url.protocol === 'blob:') return;
 
   // CORS proxy: any URL whose path contains /proxy/<host>/<rest>
-  // The WASM uses relative "proxy/<host>/<path>" which resolves to
-  // <page-origin>/<page-dir>/proxy/<host>/<path> — always within our scope.
+  // C++ emits relative "proxy/<host>/<path>" which resolves to
+  // <page-origin>/<page-dir>/proxy/<host>/<path> — within SW scope.
   var proxyIdx = url.pathname.indexOf('/proxy/');
   if (proxyIdx !== -1) {
-    var target = 'https://' + url.pathname.slice(proxyIdx + 7) + url.search;
+    var hostAndPath = url.pathname.slice(proxyIdx + 7); // after /proxy/
+    // Route through Cloudflare Worker which fetches server-side (no CORS restriction)
+    var target = CF_WORKER + '/' + hostAndPath + url.search;
     ev.respondWith(
       fetch(target, { method: ev.request.method })
         .then(function(r) {
-          var h = new Headers(r.headers);
-          h.set('Access-Control-Allow-Origin', '*');
-          return new Response(r.body, { status: r.status, statusText: r.statusText, headers: h });
+          return r;
         })
         .catch(function(err) {
-          console.error('[SW proxy] failed to fetch', target, ':', err);
+          console.error('[SW proxy] CF Worker fetch failed for', target, ':', err);
           return new Response('proxy error: ' + err, { status: 502 });
         })
     );

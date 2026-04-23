@@ -101,7 +101,7 @@ if (ENVIRONMENT_IS_NODE) {
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: C:\Users\Lucid\AppData\Local\Temp\tmpjced8ars.js
+// include: C:\Users\Lucid\AppData\Local\Temp\tmps3mzsr7w.js
 Module["expectedDataFileDownloads"] ??= 0;
 
 Module["expectedDataFileDownloads"]++;
@@ -1572,2682 +1572,2682 @@ Module["expectedDataFileDownloads"]++;
     }, {
       "filename": "/content/scripts/CharacterScripts/Animate.lua",
       "start": 146924037,
-      "end": 146930866
+      "end": 146930900
     }, {
       "filename": "/content/scripts/CoreScripts/BubbleChat.lua",
-      "start": 146930866,
-      "end": 146952883
+      "start": 146930900,
+      "end": 146952917
     }, {
       "filename": "/content/scripts/CoreScripts/BuildToolsScripts/BuildToolManager.lua",
-      "start": 146952883,
-      "end": 146957703
+      "start": 146952917,
+      "end": 146957737
     }, {
       "filename": "/content/scripts/CoreScripts/BuildToolsScripts/BuildToolsScript.lua",
-      "start": 146957703,
-      "end": 146963258
+      "start": 146957737,
+      "end": 146963292
     }, {
       "filename": "/content/scripts/CoreScripts/BuildToolsScripts/PersonalServerScript.lua",
-      "start": 146963258,
-      "end": 146969095
+      "start": 146963292,
+      "end": 146969129
     }, {
       "filename": "/content/scripts/CoreScripts/ContextActionTouch.lua",
-      "start": 146969095,
-      "end": 146977774
+      "start": 146969129,
+      "end": 146977808
     }, {
       "filename": "/content/scripts/CoreScripts/DeveloperConsole.lua",
-      "start": 146977774,
-      "end": 147019209
+      "start": 146977808,
+      "end": 147019243
     }, {
       "filename": "/content/scripts/CoreScripts/GamepadMenu.lua",
-      "start": 147019209,
-      "end": 147041591
+      "start": 147019243,
+      "end": 147041625
     }, {
       "filename": "/content/scripts/CoreScripts/HealthScript.lua",
-      "start": 147041591,
-      "end": 147051991
+      "start": 147041625,
+      "end": 147052025
     }, {
       "filename": "/content/scripts/CoreScripts/MainBotChatScript2.lua",
-      "start": 147051991,
-      "end": 147075931
+      "start": 147052025,
+      "end": 147075965
     }, {
       "filename": "/content/scripts/CoreScripts/NotificationScript2.lua",
-      "start": 147075931,
-      "end": 147099835
+      "start": 147075965,
+      "end": 147099869
     }, {
       "filename": "/content/scripts/CoreScripts/PurchasePromptScript2.lua",
-      "start": 147099835,
-      "end": 147153434
+      "start": 147099869,
+      "end": 147153468
     }, {
       "filename": "/content/scripts/CoreScripts/Topbar.lua",
-      "start": 147153434,
-      "end": 147188533
+      "start": 147153468,
+      "end": 147188567
     }, {
       "filename": "/content/scripts/CoreScripts/VehicleHud.lua",
-      "start": 147188533,
-      "end": 147194542
+      "start": 147188567,
+      "end": 147194576
     }, {
       "filename": "/content/scripts/Libraries/RbxGui.lua",
-      "start": 147194542,
-      "end": 147335963
+      "start": 147194576,
+      "end": 147335997
     }, {
       "filename": "/content/scripts/Libraries/RbxStamper.lua",
-      "start": 147335963,
-      "end": 147420334
+      "start": 147335997,
+      "end": 147420368
     }, {
       "filename": "/content/scripts/Libraries/RbxUtility.lua",
-      "start": 147420334,
-      "end": 147456946
+      "start": 147420368,
+      "end": 147456980
     }, {
       "filename": "/content/scripts/LoadingScript.lua",
-      "start": 147456946,
-      "end": 147480480
+      "start": 147456980,
+      "end": 147480514
     }, {
       "filename": "/content/scripts/Modules/BackpackScript.lua",
-      "start": 147480480,
-      "end": 147529478
+      "start": 147480514,
+      "end": 147529512
     }, {
       "filename": "/content/scripts/Modules/Chat.lua",
-      "start": 147529478,
-      "end": 147621765
+      "start": 147529512,
+      "end": 147621799
     }, {
       "filename": "/content/scripts/Modules/DeveloperConsoleModule.lua",
-      "start": 147621765,
-      "end": 147709389
+      "start": 147621799,
+      "end": 147709423
     }, {
       "filename": "/content/scripts/Modules/PlayerDropDown.lua",
-      "start": 147709389,
-      "end": 147728556
+      "start": 147709423,
+      "end": 147728590
     }, {
       "filename": "/content/scripts/Modules/PlayerlistModule.lua",
-      "start": 147728556,
-      "end": 147783070
+      "start": 147728590,
+      "end": 147783104
     }, {
       "filename": "/content/scripts/Modules/Settings/Pages/GameSettings.lua",
-      "start": 147783070,
-      "end": 147804690
+      "start": 147783104,
+      "end": 147804724
     }, {
       "filename": "/content/scripts/Modules/Settings/Pages/Help.lua",
-      "start": 147804690,
-      "end": 147824820
+      "start": 147804724,
+      "end": 147824854
     }, {
       "filename": "/content/scripts/Modules/Settings/Pages/Home.lua",
-      "start": 147824820,
-      "end": 147827522
+      "start": 147824854,
+      "end": 147827556
     }, {
       "filename": "/content/scripts/Modules/Settings/Pages/LeaveGame.lua",
-      "start": 147827522,
-      "end": 147831682
+      "start": 147827556,
+      "end": 147831716
     }, {
       "filename": "/content/scripts/Modules/Settings/Pages/Players.lua",
-      "start": 147831682,
-      "end": 147843027
+      "start": 147831716,
+      "end": 147843061
     }, {
       "filename": "/content/scripts/Modules/Settings/Pages/Record.lua",
-      "start": 147843027,
-      "end": 147848768
+      "start": 147843061,
+      "end": 147848802
     }, {
       "filename": "/content/scripts/Modules/Settings/Pages/ReportAbuseMenu.lua",
-      "start": 147848768,
-      "end": 147858241
+      "start": 147848802,
+      "end": 147858275
     }, {
       "filename": "/content/scripts/Modules/Settings/Pages/ResetCharacter.lua",
-      "start": 147858241,
-      "end": 147862959
+      "start": 147858275,
+      "end": 147862993
     }, {
       "filename": "/content/scripts/Modules/Settings/SettingsHub.lua",
-      "start": 147862959,
-      "end": 147899549
+      "start": 147862993,
+      "end": 147899583
     }, {
       "filename": "/content/scripts/Modules/Settings/SettingsPageFactory.lua",
-      "start": 147899549,
-      "end": 147907245
+      "start": 147899583,
+      "end": 147907279
     }, {
       "filename": "/content/scripts/Modules/Settings/Utility.lua",
-      "start": 147907245,
-      "end": 147967549
+      "start": 147907279,
+      "end": 147967583
     }, {
       "filename": "/content/scripts/Modules/TenFootInterface.lua",
-      "start": 147967549,
-      "end": 147977708
+      "start": 147967583,
+      "end": 147977742
     }, {
       "filename": "/content/scripts/ServerCoreScripts/ServerSocialScript.lua",
-      "start": 147977708,
-      "end": 147984601
+      "start": 147977742,
+      "end": 147984635
     }, {
       "filename": "/content/scripts/ServerStarterScript.lua",
-      "start": 147984601,
-      "end": 147984654
+      "start": 147984635,
+      "end": 147984688
     }, {
       "filename": "/content/scripts/StarterScript.lua",
-      "start": 147984654,
-      "end": 147986608
+      "start": 147984688,
+      "end": 147986642
     }, {
       "filename": "/content/sky/lensflare.jpg",
-      "start": 147986608,
-      "end": 147995045
+      "start": 147986642,
+      "end": 147995079
     }, {
       "filename": "/content/sky/moon-alpha.jpg",
-      "start": 147995045,
-      "end": 147999965
+      "start": 147995079,
+      "end": 147999999
     }, {
       "filename": "/content/sky/moon.jpg",
-      "start": 147999965,
-      "end": 148007359
+      "start": 147999999,
+      "end": 148007393
     }, {
       "filename": "/content/sky/null_plainsky512_bk.jpg",
-      "start": 148007359,
-      "end": 148056636
+      "start": 148007393,
+      "end": 148056670
     }, {
       "filename": "/content/sky/null_plainsky512_dn.jpg",
-      "start": 148056636,
-      "end": 148090304
+      "start": 148056670,
+      "end": 148090338
     }, {
       "filename": "/content/sky/null_plainsky512_ft.jpg",
-      "start": 148090304,
-      "end": 148137995
+      "start": 148090338,
+      "end": 148138029
     }, {
       "filename": "/content/sky/null_plainsky512_lf.jpg",
-      "start": 148137995,
-      "end": 148181652
+      "start": 148138029,
+      "end": 148181686
     }, {
       "filename": "/content/sky/null_plainsky512_rt.jpg",
-      "start": 148181652,
-      "end": 148231853
+      "start": 148181686,
+      "end": 148231887
     }, {
       "filename": "/content/sky/null_plainsky512_up.jpg",
-      "start": 148231853,
-      "end": 148267365
+      "start": 148231887,
+      "end": 148267399
     }, {
       "filename": "/content/sky/skyspheremap.jpg",
-      "start": 148267365,
-      "end": 148277845
+      "start": 148267399,
+      "end": 148277879
     }, {
       "filename": "/content/sky/sun-rays.jpg",
-      "start": 148277845,
-      "end": 148282424
+      "start": 148277879,
+      "end": 148282458
     }, {
       "filename": "/content/sky/sun.jpg",
-      "start": 148282424,
-      "end": 148297197
+      "start": 148282458,
+      "end": 148297231
     }, {
       "filename": "/content/sounds/Kerplunk.mp3",
-      "start": 148297197,
-      "end": 148302243,
+      "start": 148297231,
+      "end": 148302277,
       "audio": 1
     }, {
       "filename": "/content/sounds/Kid saying Ouch.mp3",
-      "start": 148302243,
-      "end": 148309554,
+      "start": 148302277,
+      "end": 148309588,
       "audio": 1
     }, {
       "filename": "/content/sounds/Rubber band sling shot.mp3",
-      "start": 148309554,
-      "end": 148318585,
+      "start": 148309588,
+      "end": 148318619,
       "audio": 1
     }, {
       "filename": "/content/sounds/Rubber band.mp3",
-      "start": 148318585,
-      "end": 148329348,
+      "start": 148318619,
+      "end": 148329382,
       "audio": 1
     }, {
       "filename": "/content/sounds/SWITCH3.mp3",
-      "start": 148329348,
-      "end": 148334393,
+      "start": 148329382,
+      "end": 148334427,
       "audio": 1
     }, {
       "filename": "/content/sounds/action_falling.mp3",
-      "start": 148334393,
-      "end": 148468456,
+      "start": 148334427,
+      "end": 148468490,
       "audio": 1
     }, {
       "filename": "/content/sounds/action_footsteps_plastic.mp3",
-      "start": 148468456,
-      "end": 148509314,
+      "start": 148468490,
+      "end": 148509348,
       "audio": 1
     }, {
       "filename": "/content/sounds/action_get_up.mp3",
-      "start": 148509314,
-      "end": 148519661,
+      "start": 148509348,
+      "end": 148519695,
       "audio": 1
     }, {
       "filename": "/content/sounds/action_jump.mp3",
-      "start": 148519661,
-      "end": 148526246,
+      "start": 148519695,
+      "end": 148526280,
       "audio": 1
     }, {
       "filename": "/content/sounds/action_jump_land.mp3",
-      "start": 148526246,
-      "end": 148531577,
+      "start": 148526280,
+      "end": 148531611,
       "audio": 1
     }, {
       "filename": "/content/sounds/action_swim.mp3",
-      "start": 148531577,
-      "end": 148610887,
+      "start": 148531611,
+      "end": 148610921,
       "audio": 1
     }, {
       "filename": "/content/sounds/bass.mp3",
-      "start": 148610887,
-      "end": 148621067,
+      "start": 148610921,
+      "end": 148621101,
       "audio": 1
     }, {
       "filename": "/content/sounds/bfsl-minifigfoots1.mp3",
-      "start": 148621067,
-      "end": 148637579,
+      "start": 148621101,
+      "end": 148637613,
       "audio": 1
     }, {
       "filename": "/content/sounds/bfsl-minifigfoots2.mp3",
-      "start": 148637579,
-      "end": 148678667,
+      "start": 148637613,
+      "end": 148678701,
       "audio": 1
     }, {
       "filename": "/content/sounds/button.mp3",
-      "start": 148678667,
-      "end": 148685393,
+      "start": 148678701,
+      "end": 148685427,
       "audio": 1
     }, {
       "filename": "/content/sounds/clickfast.mp3",
-      "start": 148685393,
-      "end": 148689818,
+      "start": 148685427,
+      "end": 148689852,
       "audio": 1
     }, {
       "filename": "/content/sounds/collide.mp3",
-      "start": 148689818,
-      "end": 148701551,
+      "start": 148689852,
+      "end": 148701585,
       "audio": 1
     }, {
       "filename": "/content/sounds/electronicpingshort.mp3",
-      "start": 148701551,
-      "end": 148709442,
+      "start": 148701585,
+      "end": 148709476,
       "audio": 1
     }, {
       "filename": "/content/sounds/flashbulb.mp3",
-      "start": 148709442,
-      "end": 148714443,
+      "start": 148709476,
+      "end": 148714477,
       "audio": 1
     }, {
       "filename": "/content/sounds/grass.mp3",
-      "start": 148714443,
-      "end": 148721367,
+      "start": 148714477,
+      "end": 148721401,
       "audio": 1
     }, {
       "filename": "/content/sounds/grass2.mp3",
-      "start": 148721367,
-      "end": 148728292,
+      "start": 148721401,
+      "end": 148728326,
       "audio": 1
     }, {
       "filename": "/content/sounds/grass3.mp3",
-      "start": 148728292,
-      "end": 148735217,
+      "start": 148728326,
+      "end": 148735251,
       "audio": 1
     }, {
       "filename": "/content/sounds/grassstone.mp3",
-      "start": 148735217,
-      "end": 148742146,
+      "start": 148735251,
+      "end": 148742180,
       "audio": 1
     }, {
       "filename": "/content/sounds/grassstone2.mp3",
-      "start": 148742146,
-      "end": 148749076,
+      "start": 148742180,
+      "end": 148749110,
       "audio": 1
     }, {
       "filename": "/content/sounds/grassstone3.mp3",
-      "start": 148749076,
-      "end": 148756006,
+      "start": 148749110,
+      "end": 148756040,
       "audio": 1
     }, {
       "filename": "/content/sounds/hit.mp3",
-      "start": 148756006,
-      "end": 148764809,
+      "start": 148756040,
+      "end": 148764843,
       "audio": 1
     }, {
       "filename": "/content/sounds/ice.mp3",
-      "start": 148764809,
-      "end": 148771731,
+      "start": 148764843,
+      "end": 148771765,
       "audio": 1
     }, {
       "filename": "/content/sounds/ice2.mp3",
-      "start": 148771731,
-      "end": 148778654,
+      "start": 148771765,
+      "end": 148778688,
       "audio": 1
     }, {
       "filename": "/content/sounds/ice3.mp3",
-      "start": 148778654,
-      "end": 148785577,
+      "start": 148778688,
+      "end": 148785611,
       "audio": 1
     }, {
       "filename": "/content/sounds/icegrass.mp3",
-      "start": 148785577,
-      "end": 148792504,
+      "start": 148785611,
+      "end": 148792538,
       "audio": 1
     }, {
       "filename": "/content/sounds/icegrass2.mp3",
-      "start": 148792504,
-      "end": 148799432,
+      "start": 148792538,
+      "end": 148799466,
       "audio": 1
     }, {
       "filename": "/content/sounds/icegrass3.mp3",
-      "start": 148799432,
-      "end": 148806360,
+      "start": 148799466,
+      "end": 148806394,
       "audio": 1
     }, {
       "filename": "/content/sounds/icemetal.mp3",
-      "start": 148806360,
-      "end": 148813287,
+      "start": 148806394,
+      "end": 148813321,
       "audio": 1
     }, {
       "filename": "/content/sounds/icemetal2.mp3",
-      "start": 148813287,
-      "end": 148820215,
+      "start": 148813321,
+      "end": 148820249,
       "audio": 1
     }, {
       "filename": "/content/sounds/icemetal3.mp3",
-      "start": 148820215,
-      "end": 148827143,
+      "start": 148820249,
+      "end": 148827177,
       "audio": 1
     }, {
       "filename": "/content/sounds/icestone.mp3",
-      "start": 148827143,
-      "end": 148834070,
+      "start": 148827177,
+      "end": 148834104,
       "audio": 1
     }, {
       "filename": "/content/sounds/icestone2.mp3",
-      "start": 148834070,
-      "end": 148840998,
+      "start": 148834104,
+      "end": 148841032,
       "audio": 1
     }, {
       "filename": "/content/sounds/icestone3.mp3",
-      "start": 148840998,
-      "end": 148847926,
+      "start": 148841032,
+      "end": 148847960,
       "audio": 1
     }, {
       "filename": "/content/sounds/impact_bodyfall.mp3",
-      "start": 148847926,
-      "end": 148858273,
+      "start": 148847960,
+      "end": 148858307,
       "audio": 1
     }, {
       "filename": "/content/sounds/impact_explosion_01.mp3",
-      "start": 148858273,
-      "end": 148891189,
+      "start": 148858307,
+      "end": 148891223,
       "audio": 1
     }, {
       "filename": "/content/sounds/impact_explosion_02.mp3",
-      "start": 148891189,
-      "end": 148926195,
+      "start": 148891223,
+      "end": 148926229,
       "audio": 1
     }, {
       "filename": "/content/sounds/impact_explosion_03.mp3",
-      "start": 148926195,
-      "end": 148968724,
+      "start": 148926229,
+      "end": 148968758,
       "audio": 1
     }, {
       "filename": "/content/sounds/impact_water.mp3",
-      "start": 148968724,
-      "end": 149007910,
+      "start": 148968758,
+      "end": 149007944,
       "audio": 1
     }, {
       "filename": "/content/sounds/metal.mp3",
-      "start": 149007910,
-      "end": 149014834,
+      "start": 149007944,
+      "end": 149014868,
       "audio": 1
     }, {
       "filename": "/content/sounds/metal2.mp3",
-      "start": 149014834,
-      "end": 149021759,
+      "start": 149014868,
+      "end": 149021793,
       "audio": 1
     }, {
       "filename": "/content/sounds/metal3.mp3",
-      "start": 149021759,
-      "end": 149028684,
+      "start": 149021793,
+      "end": 149028718,
       "audio": 1
     }, {
       "filename": "/content/sounds/metalgrass.mp3",
-      "start": 149028684,
-      "end": 149035613,
+      "start": 149028718,
+      "end": 149035647,
       "audio": 1
     }, {
       "filename": "/content/sounds/metalgrass2.mp3",
-      "start": 149035613,
-      "end": 149042543,
+      "start": 149035647,
+      "end": 149042577,
       "audio": 1
     }, {
       "filename": "/content/sounds/metalgrass3.mp3",
-      "start": 149042543,
-      "end": 149049473,
+      "start": 149042577,
+      "end": 149049507,
       "audio": 1
     }, {
       "filename": "/content/sounds/metalstone.mp3",
-      "start": 149049473,
-      "end": 149056402,
+      "start": 149049507,
+      "end": 149056436,
       "audio": 1
     }, {
       "filename": "/content/sounds/metalstone2.mp3",
-      "start": 149056402,
-      "end": 149063332,
+      "start": 149056436,
+      "end": 149063366,
       "audio": 1
     }, {
       "filename": "/content/sounds/metalstone3.mp3",
-      "start": 149063332,
-      "end": 149070262,
+      "start": 149063366,
+      "end": 149070296,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticgrass.mp3",
-      "start": 149070262,
-      "end": 149077193,
+      "start": 149070296,
+      "end": 149077227,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticgrass2.mp3",
-      "start": 149077193,
-      "end": 149084125,
+      "start": 149077227,
+      "end": 149084159,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticgrass3.mp3",
-      "start": 149084125,
-      "end": 149091057,
+      "start": 149084159,
+      "end": 149091091,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticice.mp3",
-      "start": 149091057,
-      "end": 149097986,
+      "start": 149091091,
+      "end": 149098020,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticice2.mp3",
-      "start": 149097986,
-      "end": 149104916,
+      "start": 149098020,
+      "end": 149104950,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticice3.mp3",
-      "start": 149104916,
-      "end": 149111846,
+      "start": 149104950,
+      "end": 149111880,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticmetal.mp3",
-      "start": 149111846,
-      "end": 149118777,
+      "start": 149111880,
+      "end": 149118811,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticmetal2.mp3",
-      "start": 149118777,
-      "end": 149125709,
+      "start": 149118811,
+      "end": 149125743,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticmetal3.mp3",
-      "start": 149125709,
-      "end": 149132641,
+      "start": 149125743,
+      "end": 149132675,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticplastic.mp3",
-      "start": 149132641,
-      "end": 149139574,
+      "start": 149132675,
+      "end": 149139608,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticplastic2.mp3",
-      "start": 149139574,
-      "end": 149146508,
+      "start": 149139608,
+      "end": 149146542,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticplastic3.mp3",
-      "start": 149146508,
-      "end": 149155323,
+      "start": 149146542,
+      "end": 149155357,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticstone.mp3",
-      "start": 149155323,
-      "end": 149162254,
+      "start": 149155357,
+      "end": 149162288,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticstone2.mp3",
-      "start": 149162254,
-      "end": 149169186,
+      "start": 149162288,
+      "end": 149169220,
       "audio": 1
     }, {
       "filename": "/content/sounds/plasticstone3.mp3",
-      "start": 149169186,
-      "end": 149176118,
+      "start": 149169220,
+      "end": 149176152,
       "audio": 1
     }, {
       "filename": "/content/sounds/snap.mp3",
-      "start": 149176118,
-      "end": 149181578,
+      "start": 149176152,
+      "end": 149181612,
       "audio": 1
     }, {
       "filename": "/content/sounds/splat.mp3",
-      "start": 149181578,
-      "end": 149187727,
+      "start": 149181612,
+      "end": 149187761,
       "audio": 1
     }, {
       "filename": "/content/sounds/stone.mp3",
-      "start": 149187727,
-      "end": 149194651,
+      "start": 149187761,
+      "end": 149194685,
       "audio": 1
     }, {
       "filename": "/content/sounds/stone2.mp3",
-      "start": 149194651,
-      "end": 149201576,
+      "start": 149194685,
+      "end": 149201610,
       "audio": 1
     }, {
       "filename": "/content/sounds/stone3.mp3",
-      "start": 149201576,
-      "end": 149208501,
+      "start": 149201610,
+      "end": 149208535,
       "audio": 1
     }, {
       "filename": "/content/sounds/switch.mp3",
-      "start": 149208501,
-      "end": 149214381,
+      "start": 149208535,
+      "end": 149214415,
       "audio": 1
     }, {
       "filename": "/content/sounds/swoosh.mp3",
-      "start": 149214381,
-      "end": 149219955,
+      "start": 149214415,
+      "end": 149219989,
       "audio": 1
     }, {
       "filename": "/content/sounds/swordlunge.mp3",
-      "start": 149219955,
-      "end": 149228347,
+      "start": 149219989,
+      "end": 149228381,
       "audio": 1
     }, {
       "filename": "/content/sounds/swordslash.mp3",
-      "start": 149228347,
-      "end": 149235694,
+      "start": 149228381,
+      "end": 149235728,
       "audio": 1
     }, {
       "filename": "/content/sounds/unsheath.mp3",
-      "start": 149235694,
-      "end": 149249517,
+      "start": 149235728,
+      "end": 149249551,
       "audio": 1
     }, {
       "filename": "/content/sounds/uuhhh.mp3",
-      "start": 149249517,
-      "end": 149254978,
+      "start": 149249551,
+      "end": 149255012,
       "audio": 1
     }, {
       "filename": "/content/sounds/victory.mp3",
-      "start": 149254978,
-      "end": 149267546,
+      "start": 149255012,
+      "end": 149267580,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodgrass.mp3",
-      "start": 149267546,
-      "end": 149274474,
+      "start": 149267580,
+      "end": 149274508,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodgrass2.mp3",
-      "start": 149274474,
-      "end": 149281403,
+      "start": 149274508,
+      "end": 149281437,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodgrass3.mp3",
-      "start": 149281403,
-      "end": 149288332,
+      "start": 149281437,
+      "end": 149288366,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodice.mp3",
-      "start": 149288332,
-      "end": 149295258,
+      "start": 149288366,
+      "end": 149295292,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodice2.mp3",
-      "start": 149295258,
-      "end": 149302185,
+      "start": 149295292,
+      "end": 149302219,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodice3.mp3",
-      "start": 149302185,
-      "end": 149309112,
+      "start": 149302219,
+      "end": 149309146,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodmetal.mp3",
-      "start": 149309112,
-      "end": 149316040,
+      "start": 149309146,
+      "end": 149316074,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodmetal2.mp3",
-      "start": 149316040,
-      "end": 149322969,
+      "start": 149316074,
+      "end": 149323003,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodmetal3.mp3",
-      "start": 149322969,
-      "end": 149329898,
+      "start": 149323003,
+      "end": 149329932,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodplastic.mp3",
-      "start": 149329898,
-      "end": 149336828,
+      "start": 149329932,
+      "end": 149336862,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodplastic2.mp3",
-      "start": 149336828,
-      "end": 149343759,
+      "start": 149336862,
+      "end": 149343793,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodplastic3.mp3",
-      "start": 149343759,
-      "end": 149350690,
+      "start": 149343793,
+      "end": 149350724,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodstone.mp3",
-      "start": 149350690,
-      "end": 149357618,
+      "start": 149350724,
+      "end": 149357652,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodstone2.mp3",
-      "start": 149357618,
-      "end": 149364547,
+      "start": 149357652,
+      "end": 149364581,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodstone3.mp3",
-      "start": 149364547,
-      "end": 149371476,
+      "start": 149364581,
+      "end": 149371510,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodwood.mp3",
-      "start": 149371476,
-      "end": 149378403,
+      "start": 149371510,
+      "end": 149378437,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodwood2.mp3",
-      "start": 149378403,
-      "end": 149385331,
+      "start": 149378437,
+      "end": 149385365,
       "audio": 1
     }, {
       "filename": "/content/sounds/woodwood3.mp3",
-      "start": 149385331,
-      "end": 149392259,
+      "start": 149385365,
+      "end": 149392293,
       "audio": 1
     }, {
       "filename": "/content/test/Baseplate.rbxl",
-      "start": 149392259,
-      "end": 149432732
+      "start": 149392293,
+      "end": 149432766
     }, {
       "filename": "/content/textures/AnchorCursor.png",
-      "start": 149432732,
-      "end": 149433991
+      "start": 149432766,
+      "end": 149434025
     }, {
       "filename": "/content/textures/ArrowCursor.png",
-      "start": 149433991,
-      "end": 149434274
+      "start": 149434025,
+      "end": 149434308
     }, {
       "filename": "/content/textures/ArrowCursorDecalDrag.png",
-      "start": 149434274,
-      "end": 149434557
+      "start": 149434308,
+      "end": 149434591
     }, {
       "filename": "/content/textures/ArrowFarCursor.png",
-      "start": 149434557,
-      "end": 149434844
+      "start": 149434591,
+      "end": 149434878
     }, {
       "filename": "/content/textures/BWGradient.png",
-      "start": 149434844,
-      "end": 149484691
+      "start": 149434878,
+      "end": 149484725
     }, {
       "filename": "/content/textures/BackgroundImage.png",
-      "start": 149484691,
-      "end": 149487687
+      "start": 149484725,
+      "end": 149487721
     }, {
       "filename": "/content/textures/Blank.png",
-      "start": 149487687,
-      "end": 149487874
+      "start": 149487721,
+      "end": 149487908
     }, {
       "filename": "/content/textures/Clone.png",
-      "start": 149487874,
-      "end": 149494143
+      "start": 149487908,
+      "end": 149494177
     }, {
       "filename": "/content/textures/CloneCursor.png",
-      "start": 149494143,
-      "end": 149497327
+      "start": 149494177,
+      "end": 149497361
     }, {
       "filename": "/content/textures/CloneDownCursor.png",
-      "start": 149497327,
-      "end": 149502082
+      "start": 149497361,
+      "end": 149502116
     }, {
       "filename": "/content/textures/CloneOverCursor.png",
-      "start": 149502082,
-      "end": 149505298
+      "start": 149502116,
+      "end": 149505332
     }, {
       "filename": "/content/textures/Cursors/Gamepad/Pointer.png",
-      "start": 149505298,
-      "end": 149506635
+      "start": 149505332,
+      "end": 149506669
     }, {
       "filename": "/content/textures/Cursors/Gamepad/Pointer@2x.png",
-      "start": 149506635,
-      "end": 149508122
+      "start": 149506669,
+      "end": 149508156
     }, {
       "filename": "/content/textures/Cursors/Gamepad/PointerOver.png",
-      "start": 149508122,
-      "end": 149509275
+      "start": 149508156,
+      "end": 149509309
     }, {
       "filename": "/content/textures/Cursors/Gamepad/PointerOver@2x.png",
-      "start": 149509275,
-      "end": 149511236
+      "start": 149509309,
+      "end": 149511270
     }, {
       "filename": "/content/textures/DialogHelp.png",
-      "start": 149511236,
-      "end": 149512126
+      "start": 149511270,
+      "end": 149512160
     }, {
       "filename": "/content/textures/DialogQuest.png",
-      "start": 149512126,
-      "end": 149512685
+      "start": 149512160,
+      "end": 149512719
     }, {
       "filename": "/content/textures/DialogShop.png",
-      "start": 149512685,
-      "end": 149513884
+      "start": 149512719,
+      "end": 149513918
     }, {
       "filename": "/content/textures/DragCursor.png",
-      "start": 149513884,
-      "end": 149515947
+      "start": 149513918,
+      "end": 149515981
     }, {
       "filename": "/content/textures/DropperCursor.png",
-      "start": 149515947,
-      "end": 149516300
+      "start": 149515981,
+      "end": 149516334
     }, {
       "filename": "/content/textures/Exit.png",
-      "start": 149516300,
-      "end": 149519419
+      "start": 149516334,
+      "end": 149519453
     }, {
       "filename": "/content/textures/Exit_dn.png",
-      "start": 149519419,
-      "end": 149522500
+      "start": 149519453,
+      "end": 149522534
     }, {
       "filename": "/content/textures/Exit_ovr.png",
-      "start": 149522500,
-      "end": 149525581
+      "start": 149522534,
+      "end": 149525615
     }, {
       "filename": "/content/textures/FillCursor.png",
-      "start": 149525581,
-      "end": 149526014
+      "start": 149525615,
+      "end": 149526048
     }, {
       "filename": "/content/textures/FlagCursor.png",
-      "start": 149526014,
-      "end": 149526642
+      "start": 149526048,
+      "end": 149526676
     }, {
       "filename": "/content/textures/FlatCursor.png",
-      "start": 149526642,
-      "end": 149527237
+      "start": 149526676,
+      "end": 149527271
     }, {
       "filename": "/content/textures/GrabCursor.png",
-      "start": 149527237,
-      "end": 149529514
+      "start": 149527271,
+      "end": 149529548
     }, {
       "filename": "/content/textures/GrabRotateCursor.png",
-      "start": 149529514,
-      "end": 149532407
+      "start": 149529548,
+      "end": 149532441
     }, {
       "filename": "/content/textures/Grass_Texture.jpg",
-      "start": 149532407,
-      "end": 149773226
+      "start": 149532441,
+      "end": 149773260
     }, {
       "filename": "/content/textures/GunCursor.png",
-      "start": 149773226,
-      "end": 149774173
+      "start": 149773260,
+      "end": 149774207
     }, {
       "filename": "/content/textures/GunWaitCursor.png",
-      "start": 149774173,
-      "end": 149776108
+      "start": 149774207,
+      "end": 149776142
     }, {
       "filename": "/content/textures/HammerCursor.png",
-      "start": 149776108,
-      "end": 149778551
+      "start": 149776142,
+      "end": 149778585
     }, {
       "filename": "/content/textures/HammerDownCursor.png",
-      "start": 149778551,
-      "end": 149782552
+      "start": 149778585,
+      "end": 149782586
     }, {
       "filename": "/content/textures/HammerOverCursor.png",
-      "start": 149782552,
-      "end": 149785420
+      "start": 149782586,
+      "end": 149785454
     }, {
       "filename": "/content/textures/HingeCursor.png",
-      "start": 149785420,
-      "end": 149786047
+      "start": 149785454,
+      "end": 149786081
     }, {
       "filename": "/content/textures/LockCursor.png",
-      "start": 149786047,
-      "end": 149786835
+      "start": 149786081,
+      "end": 149786869
     }, {
       "filename": "/content/textures/MotorCursor.png",
-      "start": 149786835,
-      "end": 149787495
+      "start": 149786869,
+      "end": 149787529
     }, {
       "filename": "/content/textures/MouseLockedCursor.png",
-      "start": 149787495,
-      "end": 149789825
+      "start": 149787529,
+      "end": 149789859
     }, {
       "filename": "/content/textures/ResizeCursor.png",
-      "start": 149789825,
-      "end": 149790377
+      "start": 149789859,
+      "end": 149790411
     }, {
       "filename": "/content/textures/Roblox-loading-glow.png",
-      "start": 149790377,
-      "end": 149796289
+      "start": 149790411,
+      "end": 149796323
     }, {
       "filename": "/content/textures/Roblox-loading-glow@2x.png",
-      "start": 149796289,
-      "end": 149809490
+      "start": 149796323,
+      "end": 149809524
     }, {
       "filename": "/content/textures/Roblox-loading.png",
-      "start": 149809490,
-      "end": 149836618
+      "start": 149809524,
+      "end": 149836652
     }, {
       "filename": "/content/textures/Roblox-loading@2x.png",
-      "start": 149836618,
-      "end": 149899719
+      "start": 149836652,
+      "end": 149899753
     }, {
       "filename": "/content/textures/Roblox.bmp",
-      "start": 149899719,
-      "end": 149912063
+      "start": 149899753,
+      "end": 149912097
     }, {
       "filename": "/content/textures/RustGradient.png",
-      "start": 149912063,
-      "end": 149942853
+      "start": 149912097,
+      "end": 149942887
     }, {
       "filename": "/content/textures/Smoke.png",
-      "start": 149942853,
-      "end": 149998604
+      "start": 149942887,
+      "end": 149998638
     }, {
       "filename": "/content/textures/SpawnCursor.png",
-      "start": 149998604,
-      "end": 149999259
+      "start": 149998638,
+      "end": 149999293
     }, {
       "filename": "/content/textures/SpawnLocation.png",
-      "start": 149999259,
-      "end": 150001931
+      "start": 149999293,
+      "end": 150001965
     }, {
       "filename": "/content/textures/SurfacesDefault.png",
-      "start": 150001931,
-      "end": 150002097
+      "start": 150001965,
+      "end": 150002131
     }, {
       "filename": "/content/textures/UnAnchorCursor.png",
-      "start": 150002097,
-      "end": 150003933
+      "start": 150002131,
+      "end": 150003967
     }, {
       "filename": "/content/textures/UnlockCursor.png",
-      "start": 150003933,
-      "end": 150004731
+      "start": 150003967,
+      "end": 150004765
     }, {
       "filename": "/content/textures/WeldCursor.png",
-      "start": 150004731,
-      "end": 150005253
+      "start": 150004765,
+      "end": 150005287
     }, {
       "filename": "/content/textures/WhiteCircle.png",
-      "start": 150005253,
-      "end": 150011766
+      "start": 150005287,
+      "end": 150011800
     }, {
       "filename": "/content/textures/advClosed-hand-no-weld.png",
-      "start": 150011766,
-      "end": 150013001
+      "start": 150011800,
+      "end": 150013035
     }, {
       "filename": "/content/textures/advClosed-hand-weld.png",
-      "start": 150013001,
-      "end": 150014302
+      "start": 150013035,
+      "end": 150014336
     }, {
       "filename": "/content/textures/advClosed-hand.png",
-      "start": 150014302,
-      "end": 150015483
+      "start": 150014336,
+      "end": 150015517
     }, {
       "filename": "/content/textures/advCursor-default.png",
-      "start": 150015483,
-      "end": 150016659
+      "start": 150015517,
+      "end": 150016693
     }, {
       "filename": "/content/textures/advCursor-openedHand.png",
-      "start": 150016659,
-      "end": 150017896
+      "start": 150016693,
+      "end": 150017930
     }, {
       "filename": "/content/textures/advCursor-white.png",
-      "start": 150017896,
-      "end": 150019058
+      "start": 150017930,
+      "end": 150019092
     }, {
       "filename": "/content/textures/advancedMove.png",
-      "start": 150019058,
-      "end": 150021842
+      "start": 150019092,
+      "end": 150021876
     }, {
       "filename": "/content/textures/advancedMoveResize.png",
-      "start": 150021842,
-      "end": 150024884
+      "start": 150021876,
+      "end": 150024918
     }, {
       "filename": "/content/textures/advancedMove_joint.png",
-      "start": 150024884,
-      "end": 150029418
+      "start": 150024918,
+      "end": 150029452
     }, {
       "filename": "/content/textures/advancedMove_keysOnly.png",
-      "start": 150029418,
-      "end": 150033242
+      "start": 150029452,
+      "end": 150033276
     }, {
       "filename": "/content/textures/advancedMove_noJoint.png",
-      "start": 150033242,
-      "end": 150038153
+      "start": 150033276,
+      "end": 150038187
     }, {
       "filename": "/content/textures/blackBkg_round.png",
-      "start": 150038153,
-      "end": 150038596
+      "start": 150038187,
+      "end": 150038630
     }, {
       "filename": "/content/textures/blackBkg_square.png",
-      "start": 150038596,
-      "end": 150038750
+      "start": 150038630,
+      "end": 150038784
     }, {
       "filename": "/content/textures/chatBubble_botBlue_bkg.png",
-      "start": 150038750,
-      "end": 150041526
+      "start": 150038784,
+      "end": 150041560
     }, {
       "filename": "/content/textures/chatBubble_botBlue_notify_bkg.png",
-      "start": 150041526,
-      "end": 150045630
+      "start": 150041560,
+      "end": 150045664
     }, {
       "filename": "/content/textures/chatBubble_botBlue_tail.png",
-      "start": 150045630,
-      "end": 150052027
+      "start": 150045664,
+      "end": 150052061
     }, {
       "filename": "/content/textures/chatBubble_botBlue_tailRight.png",
-      "start": 150052027,
-      "end": 150056308
+      "start": 150052061,
+      "end": 150056342
     }, {
       "filename": "/content/textures/chatBubble_botGreen_bkg.png",
-      "start": 150056308,
-      "end": 150058499
+      "start": 150056342,
+      "end": 150058533
     }, {
       "filename": "/content/textures/chatBubble_botGreen_notify_bkg.png",
-      "start": 150058499,
-      "end": 150061920
+      "start": 150058533,
+      "end": 150061954
     }, {
       "filename": "/content/textures/chatBubble_botGreen_tail.png",
-      "start": 150061920,
-      "end": 150066743
+      "start": 150061954,
+      "end": 150066777
     }, {
       "filename": "/content/textures/chatBubble_botGreen_tailRight.png",
-      "start": 150066743,
-      "end": 150070324
+      "start": 150066777,
+      "end": 150070358
     }, {
       "filename": "/content/textures/chatBubble_botRed_bkg.png",
-      "start": 150070324,
-      "end": 150072967
+      "start": 150070358,
+      "end": 150073001
     }, {
       "filename": "/content/textures/chatBubble_botRed_notify_bkg.png",
-      "start": 150072967,
-      "end": 150076187
+      "start": 150073001,
+      "end": 150076221
     }, {
       "filename": "/content/textures/chatBubble_botRed_tail.png",
-      "start": 150076187,
-      "end": 150080053
+      "start": 150076221,
+      "end": 150080087
     }, {
       "filename": "/content/textures/chatBubble_botRed_tailRight.png",
-      "start": 150080053,
-      "end": 150083681
+      "start": 150080087,
+      "end": 150083715
     }, {
       "filename": "/content/textures/chatBubble_bot_notifyGray_dotDotDot.png",
-      "start": 150083681,
-      "end": 150086599
+      "start": 150083715,
+      "end": 150086633
     }, {
       "filename": "/content/textures/chatBubble_bot_notify_bang.png",
-      "start": 150086599,
-      "end": 150087704
+      "start": 150086633,
+      "end": 150087738
     }, {
       "filename": "/content/textures/chatBubble_bot_notify_dotDotDot.png",
-      "start": 150087704,
-      "end": 150088737
+      "start": 150087738,
+      "end": 150088771
     }, {
       "filename": "/content/textures/chatBubble_bot_notify_money.png",
-      "start": 150088737,
-      "end": 150090237
+      "start": 150088771,
+      "end": 150090271
     }, {
       "filename": "/content/textures/chatBubble_bot_notify_question.png",
-      "start": 150090237,
-      "end": 150091507
+      "start": 150090271,
+      "end": 150091541
     }, {
       "filename": "/content/textures/chatBubble_white_bkg.png",
-      "start": 150091507,
-      "end": 150095811
+      "start": 150091541,
+      "end": 150095845
     }, {
       "filename": "/content/textures/chatBubble_white_notify_bkg.png",
-      "start": 150095811,
-      "end": 150099872
+      "start": 150095845,
+      "end": 150099906
     }, {
       "filename": "/content/textures/chatBubble_white_tail.png",
-      "start": 150099872,
-      "end": 150101451
+      "start": 150099906,
+      "end": 150101485
     }, {
       "filename": "/content/textures/dirt.jpg",
-      "start": 150101451,
-      "end": 150274937
+      "start": 150101485,
+      "end": 150274971
     }, {
       "filename": "/content/textures/explosion.png",
-      "start": 150274937,
-      "end": 150287706
+      "start": 150274971,
+      "end": 150287740
     }, {
       "filename": "/content/textures/face.png",
-      "start": 150287706,
-      "end": 150288755
+      "start": 150287740,
+      "end": 150288789
     }, {
       "filename": "/content/textures/fire_0.png",
-      "start": 150288755,
-      "end": 150314291
+      "start": 150288789,
+      "end": 150314325
     }, {
       "filename": "/content/textures/glow.png",
-      "start": 150314291,
-      "end": 150370896
+      "start": 150314325,
+      "end": 150370930
     }, {
       "filename": "/content/textures/gradient.png",
-      "start": 150370896,
-      "end": 150574849
+      "start": 150370930,
+      "end": 150574883
     }, {
       "filename": "/content/textures/loading/cancelButton.png",
-      "start": 150574849,
-      "end": 150578177
+      "start": 150574883,
+      "end": 150578211
     }, {
       "filename": "/content/textures/loading/darkLoadingTexture.png",
-      "start": 150578177,
-      "end": 150641282
+      "start": 150578211,
+      "end": 150641316
     }, {
       "filename": "/content/textures/loading/loadingCircle.png",
-      "start": 150641282,
-      "end": 150654577
+      "start": 150641316,
+      "end": 150654611
     }, {
       "filename": "/content/textures/loading/loadingTexture.png",
-      "start": 150654577,
-      "end": 150738451
+      "start": 150654611,
+      "end": 150738485
     }, {
       "filename": "/content/textures/loading/loadingvignette.png",
-      "start": 150738451,
-      "end": 150759159
+      "start": 150738485,
+      "end": 150759193
     }, {
       "filename": "/content/textures/loading/robloxlogo.png",
-      "start": 150759159,
-      "end": 150782534
+      "start": 150759193,
+      "end": 150782568
     }, {
       "filename": "/content/textures/lua.png",
-      "start": 150782534,
-      "end": 150847112
+      "start": 150782568,
+      "end": 150847146
     }, {
       "filename": "/content/textures/particles/common_alpha.dds",
-      "start": 150847112,
-      "end": 150851336
+      "start": 150847146,
+      "end": 150851370
     }, {
       "filename": "/content/textures/particles/explosion01_core_alpha.png",
-      "start": 150851336,
-      "end": 150880284
+      "start": 150851370,
+      "end": 150880318
     }, {
       "filename": "/content/textures/particles/explosion01_core_main.dds",
-      "start": 150880284,
-      "end": 150967820
+      "start": 150880318,
+      "end": 150967854
     }, {
       "filename": "/content/textures/particles/explosion01_implosion_color.png",
-      "start": 150967820,
-      "end": 150976598
+      "start": 150967854,
+      "end": 150976632
     }, {
       "filename": "/content/textures/particles/explosion01_implosion_main.dds",
-      "start": 150976598,
-      "end": 151064134
+      "start": 150976632,
+      "end": 151064168
     }, {
       "filename": "/content/textures/particles/explosion01_shockwave_main.dds",
-      "start": 151064134,
-      "end": 151151670
+      "start": 151064168,
+      "end": 151151704
     }, {
       "filename": "/content/textures/particles/explosion01_smoke_alpha.dds",
-      "start": 151151670,
-      "end": 151154558
+      "start": 151151704,
+      "end": 151154592
     }, {
       "filename": "/content/textures/particles/explosion01_smoke_color_new.dds",
-      "start": 151154558,
-      "end": 151157446
+      "start": 151154592,
+      "end": 151157480
     }, {
       "filename": "/content/textures/particles/explosion01_smoke_main.dds",
-      "start": 151157446,
-      "end": 151244982
+      "start": 151157480,
+      "end": 151245016
     }, {
       "filename": "/content/textures/particles/explosion_alpha.dds",
-      "start": 151244982,
-      "end": 151247870
+      "start": 151245016,
+      "end": 151247904
     }, {
       "filename": "/content/textures/particles/explosion_color.dds",
-      "start": 151247870,
-      "end": 151253518
+      "start": 151247904,
+      "end": 151253552
     }, {
       "filename": "/content/textures/particles/fire_alpha.dds",
-      "start": 151253518,
-      "end": 151259166
+      "start": 151253552,
+      "end": 151259200
     }, {
       "filename": "/content/textures/particles/fire_color.dds",
-      "start": 151259166,
-      "end": 151264814
+      "start": 151259200,
+      "end": 151264848
     }, {
       "filename": "/content/textures/particles/fire_main.dds",
-      "start": 151264814,
-      "end": 151352350
+      "start": 151264848,
+      "end": 151352384
     }, {
       "filename": "/content/textures/particles/fire_sparks_color.dds",
-      "start": 151352350,
-      "end": 151357998
+      "start": 151352384,
+      "end": 151358032
     }, {
       "filename": "/content/textures/particles/fire_sparks_main.dds",
-      "start": 151357998,
-      "end": 151363614
+      "start": 151358032,
+      "end": 151363648
     }, {
       "filename": "/content/textures/particles/forcefield_alpha.dds",
-      "start": 151363614,
-      "end": 151369262
+      "start": 151363648,
+      "end": 151369296
     }, {
       "filename": "/content/textures/particles/forcefield_glow_alpha.dds",
-      "start": 151369262,
-      "end": 151374910
+      "start": 151369296,
+      "end": 151374944
     }, {
       "filename": "/content/textures/particles/forcefield_glow_color.dds",
-      "start": 151374910,
-      "end": 151380558
+      "start": 151374944,
+      "end": 151380592
     }, {
       "filename": "/content/textures/particles/forcefield_glow_main.dds",
-      "start": 151380558,
-      "end": 151468094
+      "start": 151380592,
+      "end": 151468128
     }, {
       "filename": "/content/textures/particles/forcefield_vortex_color.dds",
-      "start": 151468094,
-      "end": 151473742
+      "start": 151468128,
+      "end": 151473776
     }, {
       "filename": "/content/textures/particles/forcefield_vortex_main.dds",
-      "start": 151473742,
-      "end": 151495742
+      "start": 151473776,
+      "end": 151495776
     }, {
       "filename": "/content/textures/particles/legacy_fire_alpha_color.dds",
-      "start": 151495742,
-      "end": 151498630
+      "start": 151495776,
+      "end": 151498664
     }, {
       "filename": "/content/textures/particles/smoke_color.dds",
-      "start": 151498630,
-      "end": 151504278
+      "start": 151498664,
+      "end": 151504312
     }, {
       "filename": "/content/textures/particles/smoke_main.dds",
-      "start": 151504278,
-      "end": 151526278
+      "start": 151504312,
+      "end": 151526312
     }, {
       "filename": "/content/textures/particles/sparkles_color.dds",
-      "start": 151526278,
-      "end": 151531926
+      "start": 151526312,
+      "end": 151531960
     }, {
       "filename": "/content/textures/particles/sparkles_main.dds",
-      "start": 151531926,
-      "end": 151553926
+      "start": 151531960,
+      "end": 151553960
     }, {
       "filename": "/content/textures/roblox-logo.png",
-      "start": 151553926,
-      "end": 151721408
+      "start": 151553960,
+      "end": 151721442
     }, {
       "filename": "/content/textures/rotationArrow.png",
-      "start": 151721408,
-      "end": 151725477
+      "start": 151721442,
+      "end": 151725511
     }, {
       "filename": "/content/textures/script.png",
-      "start": 151725477,
-      "end": 151726225
+      "start": 151725511,
+      "end": 151726259
     }, {
       "filename": "/content/textures/shadowmask.png",
-      "start": 151726225,
-      "end": 151729810
+      "start": 151726259,
+      "end": 151729844
     }, {
       "filename": "/content/textures/spark.png",
-      "start": 151729810,
-      "end": 151733387
+      "start": 151729844,
+      "end": 151733421
     }, {
       "filename": "/content/textures/sparkle.png",
-      "start": 151733387,
-      "end": 151737654
+      "start": 151733421,
+      "end": 151737688
     }, {
       "filename": "/content/textures/transformFiveDegrees.png",
-      "start": 151737654,
-      "end": 151742717
+      "start": 151737688,
+      "end": 151742751
     }, {
       "filename": "/content/textures/transformNinetyDegrees.png",
-      "start": 151742717,
-      "end": 151748233
+      "start": 151742751,
+      "end": 151748267
     }, {
       "filename": "/content/textures/transformOneDegree.png",
-      "start": 151748233,
-      "end": 151752986
+      "start": 151748267,
+      "end": 151753020
     }, {
       "filename": "/content/textures/transformTwentyTwoDegrees.png",
-      "start": 151752986,
-      "end": 151757054
+      "start": 151753020,
+      "end": 151757088
     }, {
       "filename": "/content/textures/ui/Backpack/Backpack.png",
-      "start": 151757054,
-      "end": 151757877
+      "start": 151757088,
+      "end": 151757911
     }, {
       "filename": "/content/textures/ui/Backpack/Backpack@2x.png",
-      "start": 151757877,
-      "end": 151760053
+      "start": 151757911,
+      "end": 151760087
     }, {
       "filename": "/content/textures/ui/Backpack/Backpack_Down.png",
-      "start": 151760053,
-      "end": 151761033
+      "start": 151760087,
+      "end": 151761067
     }, {
       "filename": "/content/textures/ui/Backpack/Backpack_Down@2x.png",
-      "start": 151761033,
-      "end": 151763285
+      "start": 151761067,
+      "end": 151763319
     }, {
       "filename": "/content/textures/ui/Backpack_Close.png",
-      "start": 151763285,
-      "end": 151763519
+      "start": 151763319,
+      "end": 151763553
     }, {
       "filename": "/content/textures/ui/Backpack_Close@2x.png",
-      "start": 151763519,
-      "end": 151763972
+      "start": 151763553,
+      "end": 151764006
     }, {
       "filename": "/content/textures/ui/Backpack_Open.png",
-      "start": 151763972,
-      "end": 151764216
+      "start": 151764006,
+      "end": 151764250
     }, {
       "filename": "/content/textures/ui/Backpack_Open@2x.png",
-      "start": 151764216,
-      "end": 151764661
+      "start": 151764250,
+      "end": 151764695
     }, {
       "filename": "/content/textures/ui/ButtonLeft.png",
-      "start": 151764661,
-      "end": 151779773
+      "start": 151764695,
+      "end": 151779807
     }, {
       "filename": "/content/textures/ui/ButtonLeftDown.png",
-      "start": 151779773,
-      "end": 151794884
+      "start": 151779807,
+      "end": 151794918
     }, {
       "filename": "/content/textures/ui/ButtonRight.png",
-      "start": 151794884,
-      "end": 151809979
+      "start": 151794918,
+      "end": 151810013
     }, {
       "filename": "/content/textures/ui/ButtonRightDown.png",
-      "start": 151809979,
-      "end": 151825087
+      "start": 151810013,
+      "end": 151825121
     }, {
       "filename": "/content/textures/ui/Chat/Chat.png",
-      "start": 151825087,
-      "end": 151825942
+      "start": 151825121,
+      "end": 151825976
     }, {
       "filename": "/content/textures/ui/Chat/Chat@2x.png",
-      "start": 151825942,
-      "end": 151828063
+      "start": 151825976,
+      "end": 151828097
     }, {
       "filename": "/content/textures/ui/Chat/ChatDown.png",
-      "start": 151828063,
-      "end": 151828867
+      "start": 151828097,
+      "end": 151828901
     }, {
       "filename": "/content/textures/ui/Chat/ChatDown@2x.png",
-      "start": 151828867,
-      "end": 151830703
+      "start": 151828901,
+      "end": 151830737
     }, {
       "filename": "/content/textures/ui/Chat/MessageCounter.png",
-      "start": 151830703,
-      "end": 151831300
+      "start": 151830737,
+      "end": 151831334
     }, {
       "filename": "/content/textures/ui/Chat/MessageCounter@2x.png",
-      "start": 151831300,
-      "end": 151832610
+      "start": 151831334,
+      "end": 151832644
     }, {
       "filename": "/content/textures/ui/Chat/ToggleChat.png",
-      "start": 151832610,
-      "end": 151833680
+      "start": 151832644,
+      "end": 151833714
     }, {
       "filename": "/content/textures/ui/Chat/ToggleChat@2x.png",
-      "start": 151833680,
-      "end": 151836365
+      "start": 151833714,
+      "end": 151836399
     }, {
       "filename": "/content/textures/ui/Chat/ToggleChatDown.png",
-      "start": 151836365,
-      "end": 151837523
+      "start": 151836399,
+      "end": 151837557
     }, {
       "filename": "/content/textures/ui/Chat/ToggleChatDown@2x.png",
-      "start": 151837523,
-      "end": 151840264
+      "start": 151837557,
+      "end": 151840298
     }, {
       "filename": "/content/textures/ui/CloneButton.png",
-      "start": 151840264,
-      "end": 151841929
+      "start": 151840298,
+      "end": 151841963
     }, {
       "filename": "/content/textures/ui/CloneButton_dn.png",
-      "start": 151841929,
-      "end": 151843666
+      "start": 151841963,
+      "end": 151843700
     }, {
       "filename": "/content/textures/ui/CloseButton.png",
-      "start": 151843666,
-      "end": 151845233
+      "start": 151843700,
+      "end": 151845267
     }, {
       "filename": "/content/textures/ui/CloseButton_dn.png",
-      "start": 151845233,
-      "end": 151846739
+      "start": 151845267,
+      "end": 151846773
     }, {
       "filename": "/content/textures/ui/Concrete.png",
-      "start": 151846739,
-      "end": 151848859
+      "start": 151846773,
+      "end": 151848893
     }, {
       "filename": "/content/textures/ui/CorrodedMetal.png",
-      "start": 151848859,
-      "end": 151850814
+      "start": 151848893,
+      "end": 151850848
     }, {
       "filename": "/content/textures/ui/DPadSheet.png",
-      "start": 151850814,
-      "end": 151868681
+      "start": 151850848,
+      "end": 151868715
     }, {
       "filename": "/content/textures/ui/DeleteButton.png",
-      "start": 151868681,
-      "end": 151870237
+      "start": 151868715,
+      "end": 151870271
     }, {
       "filename": "/content/textures/ui/DeleteButton_dn.png",
-      "start": 151870237,
-      "end": 151871812
+      "start": 151870271,
+      "end": 151871846
     }, {
       "filename": "/content/textures/ui/DiamondPlate.png",
-      "start": 151871812,
-      "end": 151873755
+      "start": 151871846,
+      "end": 151873789
     }, {
       "filename": "/content/textures/ui/ErrorIcon.png",
-      "start": 151873755,
-      "end": 151876818
+      "start": 151873789,
+      "end": 151876852
     }, {
       "filename": "/content/textures/ui/ErrorIconSmall.png",
-      "start": 151876818,
-      "end": 151879938
+      "start": 151876852,
+      "end": 151879972
     }, {
       "filename": "/content/textures/ui/Foil.png",
-      "start": 151879938,
-      "end": 151882021
+      "start": 151879972,
+      "end": 151882055
     }, {
       "filename": "/content/textures/ui/Gear.png",
-      "start": 151882021,
-      "end": 151883259
+      "start": 151882055,
+      "end": 151883293
     }, {
       "filename": "/content/textures/ui/Gear_dn.png",
-      "start": 151883259,
-      "end": 151884462
+      "start": 151883293,
+      "end": 151884496
     }, {
       "filename": "/content/textures/ui/Glue.png",
-      "start": 151884462,
-      "end": 151887203
+      "start": 151884496,
+      "end": 151887237
     }, {
       "filename": "/content/textures/ui/Grass.png",
-      "start": 151887203,
-      "end": 151888589
+      "start": 151887237,
+      "end": 151888623
     }, {
       "filename": "/content/textures/ui/GroupMoveButton.png",
-      "start": 151888589,
-      "end": 151890402
+      "start": 151888623,
+      "end": 151890436
     }, {
       "filename": "/content/textures/ui/GroupMoveButton_dn.png",
-      "start": 151890402,
-      "end": 151892251
+      "start": 151890436,
+      "end": 151892285
     }, {
       "filename": "/content/textures/ui/Health-BKG-Center.png",
-      "start": 151892251,
-      "end": 151893210
+      "start": 151892285,
+      "end": 151893244
     }, {
       "filename": "/content/textures/ui/Health-BKG-Center@2x.png",
-      "start": 151893210,
-      "end": 151894196
+      "start": 151893244,
+      "end": 151894230
     }, {
       "filename": "/content/textures/ui/Health-BKG-Left-Cap.png",
-      "start": 151894196,
-      "end": 151895281
+      "start": 151894230,
+      "end": 151895315
     }, {
       "filename": "/content/textures/ui/Health-BKG-Left-Cap@2x.png",
-      "start": 151895281,
-      "end": 151896591
+      "start": 151895315,
+      "end": 151896625
     }, {
       "filename": "/content/textures/ui/Health-BKG-Right-Cap.png",
-      "start": 151896591,
-      "end": 151897696
+      "start": 151896625,
+      "end": 151897730
     }, {
       "filename": "/content/textures/ui/Health-BKG-Right-Cap@2x.png",
-      "start": 151897696,
-      "end": 151899050
+      "start": 151897730,
+      "end": 151899084
     }, {
       "filename": "/content/textures/ui/Hinge.png",
-      "start": 151899050,
-      "end": 151899917
+      "start": 151899084,
+      "end": 151899951
     }, {
       "filename": "/content/textures/ui/Ice.png",
-      "start": 151899917,
-      "end": 151901836
+      "start": 151899951,
+      "end": 151901870
     }, {
       "filename": "/content/textures/ui/Inlets.png",
-      "start": 151901836,
-      "end": 151904095
+      "start": 151901870,
+      "end": 151904129
     }, {
       "filename": "/content/textures/ui/InsertButton.png",
-      "start": 151904095,
-      "end": 151905733
+      "start": 151904129,
+      "end": 151905767
     }, {
       "filename": "/content/textures/ui/InsertButton_dn.png",
-      "start": 151905733,
-      "end": 151907403
+      "start": 151905767,
+      "end": 151907437
     }, {
       "filename": "/content/textures/ui/LoadingBKG.png",
-      "start": 151907403,
-      "end": 151913313
+      "start": 151907437,
+      "end": 151913347
     }, {
       "filename": "/content/textures/ui/MaterialButton.png",
-      "start": 151913313,
-      "end": 151915355
+      "start": 151913347,
+      "end": 151915389
     }, {
       "filename": "/content/textures/ui/MaterialButton_dn.png",
-      "start": 151915355,
-      "end": 151917450
+      "start": 151915389,
+      "end": 151917484
     }, {
       "filename": "/content/textures/ui/MaterialMenu.png",
-      "start": 151917450,
-      "end": 151918937
+      "start": 151917484,
+      "end": 151918971
     }, {
       "filename": "/content/textures/ui/Menu/Hamburger.png",
-      "start": 151918937,
-      "end": 151919184
+      "start": 151918971,
+      "end": 151919218
     }, {
       "filename": "/content/textures/ui/Menu/Hamburger@2x.png",
-      "start": 151919184,
-      "end": 151919818
+      "start": 151919218,
+      "end": 151919852
     }, {
       "filename": "/content/textures/ui/Menu/HamburgerDown.png",
-      "start": 151919818,
-      "end": 151920080
+      "start": 151919852,
+      "end": 151920114
     }, {
       "filename": "/content/textures/ui/Menu/HamburgerDown@2x.png",
-      "start": 151920080,
-      "end": 151920725
+      "start": 151920114,
+      "end": 151920759
     }, {
       "filename": "/content/textures/ui/Modal.png",
-      "start": 151920725,
-      "end": 151936742
+      "start": 151920759,
+      "end": 151936776
     }, {
       "filename": "/content/textures/ui/Motor.png",
-      "start": 151936742,
-      "end": 151937622
+      "start": 151936776,
+      "end": 151937656
     }, {
       "filename": "/content/textures/ui/PaintButton.png",
-      "start": 151937622,
-      "end": 151939196
+      "start": 151937656,
+      "end": 151939230
     }, {
       "filename": "/content/textures/ui/PaintButton_dn.png",
-      "start": 151939196,
-      "end": 151940809
+      "start": 151939230,
+      "end": 151940843
     }, {
       "filename": "/content/textures/ui/PartMoveButton.png",
-      "start": 151940809,
-      "end": 151942515
+      "start": 151940843,
+      "end": 151942549
     }, {
       "filename": "/content/textures/ui/PartMoveButton_dn.png",
-      "start": 151942515,
-      "end": 151944208
+      "start": 151942549,
+      "end": 151944242
     }, {
       "filename": "/content/textures/ui/Plastic.png",
-      "start": 151944208,
-      "end": 151945381
+      "start": 151944242,
+      "end": 151945415
     }, {
       "filename": "/content/textures/ui/PlayerList/BlockedIcon.png",
-      "start": 151945381,
-      "end": 151945726
+      "start": 151945415,
+      "end": 151945760
     }, {
       "filename": "/content/textures/ui/PlayerList/CharacterImageBackground.png",
-      "start": 151945726,
-      "end": 151946306
+      "start": 151945760,
+      "end": 151946340
     }, {
       "filename": "/content/textures/ui/PlayerList/TileShadowMissingTop.png",
-      "start": 151946306,
-      "end": 151946802
+      "start": 151946340,
+      "end": 151946836
     }, {
       "filename": "/content/textures/ui/PlayerListFriendRequestReceivedIcon.png",
-      "start": 151946802,
-      "end": 151949252
+      "start": 151946836,
+      "end": 151949286
     }, {
       "filename": "/content/textures/ui/PlayerListFriendRequestSentIcon.png",
-      "start": 151949252,
-      "end": 151951600
+      "start": 151949286,
+      "end": 151951634
     }, {
       "filename": "/content/textures/ui/PlayerlistFriendIcon.png",
-      "start": 151951600,
-      "end": 151953694
+      "start": 151951634,
+      "end": 151953728
     }, {
       "filename": "/content/textures/ui/PropertyButton.png",
-      "start": 151953694,
-      "end": 151955343
+      "start": 151953728,
+      "end": 151955377
     }, {
       "filename": "/content/textures/ui/PropertyButton_dn.png",
-      "start": 151955343,
-      "end": 151957030
+      "start": 151955377,
+      "end": 151957064
     }, {
       "filename": "/content/textures/ui/RecordDown.png",
-      "start": 151957030,
-      "end": 151959390
+      "start": 151957064,
+      "end": 151959424
     }, {
       "filename": "/content/textures/ui/RecordStop.png",
-      "start": 151959390,
-      "end": 151961377
+      "start": 151959424,
+      "end": 151961411
     }, {
       "filename": "/content/textures/ui/ResetIcon.png",
-      "start": 151961377,
-      "end": 151963783
+      "start": 151961411,
+      "end": 151963817
     }, {
       "filename": "/content/textures/ui/RobuxIcon.png",
-      "start": 151963783,
-      "end": 151965947
+      "start": 151963817,
+      "end": 151965981
     }, {
       "filename": "/content/textures/ui/ScaleButton.png",
-      "start": 151965947,
-      "end": 151967694
+      "start": 151965981,
+      "end": 151967728
     }, {
       "filename": "/content/textures/ui/ScaleButton_dn.png",
-      "start": 151967694,
-      "end": 151969486
+      "start": 151967728,
+      "end": 151969520
     }, {
       "filename": "/content/textures/ui/Scroll/scroll-bottom.png",
-      "start": 151969486,
-      "end": 151970487
+      "start": 151969520,
+      "end": 151970521
     }, {
       "filename": "/content/textures/ui/Scroll/scroll-bottom@2x.png",
-      "start": 151970487,
-      "end": 151971576
+      "start": 151970521,
+      "end": 151971610
     }, {
       "filename": "/content/textures/ui/Scroll/scroll-middle.png",
-      "start": 151971576,
-      "end": 151972506
+      "start": 151971610,
+      "end": 151972540
     }, {
       "filename": "/content/textures/ui/Scroll/scroll-middle@2x.png",
-      "start": 151972506,
-      "end": 151973439
+      "start": 151972540,
+      "end": 151973473
     }, {
       "filename": "/content/textures/ui/Scroll/scroll-top.png",
-      "start": 151973439,
-      "end": 151974445
+      "start": 151973473,
+      "end": 151974479
     }, {
       "filename": "/content/textures/ui/Scroll/scroll-top@2x.png",
-      "start": 151974445,
-      "end": 151975553
+      "start": 151974479,
+      "end": 151975587
     }, {
       "filename": "/content/textures/ui/SearchIcon.png",
-      "start": 151975553,
-      "end": 151976852
+      "start": 151975587,
+      "end": 151976886
     }, {
       "filename": "/content/textures/ui/SelectionBox.png",
-      "start": 151976852,
-      "end": 151981238
+      "start": 151976886,
+      "end": 151981272
     }, {
       "filename": "/content/textures/ui/SelectionBox@2x.png",
-      "start": 151981238,
-      "end": 151987110
+      "start": 151981272,
+      "end": 151987144
     }, {
       "filename": "/content/textures/ui/Settings/DropDown/DropDown.png",
-      "start": 151987110,
-      "end": 151990014
+      "start": 151987144,
+      "end": 151990048
     }, {
       "filename": "/content/textures/ui/Settings/DropDown/DropDown@2x.png",
-      "start": 151990014,
-      "end": 151993090
+      "start": 151990048,
+      "end": 151993124
     }, {
       "filename": "/content/textures/ui/Settings/Help/AButtonDark.png",
-      "start": 151993090,
-      "end": 151998418
+      "start": 151993124,
+      "end": 151998452
     }, {
       "filename": "/content/textures/ui/Settings/Help/AButtonDark@2x.png",
-      "start": 151998418,
-      "end": 152012316
+      "start": 151998452,
+      "end": 152012350
     }, {
       "filename": "/content/textures/ui/Settings/Help/AButtonLight.png",
-      "start": 152012316,
-      "end": 152016356
+      "start": 152012350,
+      "end": 152016390
     }, {
       "filename": "/content/textures/ui/Settings/Help/AButtonLight@2x.png",
-      "start": 152016356,
-      "end": 152026421
+      "start": 152016390,
+      "end": 152026455
     }, {
       "filename": "/content/textures/ui/Settings/Help/AButtonLightSmall.png",
-      "start": 152026421,
-      "end": 152027666
+      "start": 152026455,
+      "end": 152027700
     }, {
       "filename": "/content/textures/ui/Settings/Help/BButtonDark.png",
-      "start": 152027666,
-      "end": 152032935
+      "start": 152027700,
+      "end": 152032969
     }, {
       "filename": "/content/textures/ui/Settings/Help/BButtonDark@2x.png",
-      "start": 152032935,
-      "end": 152046695
+      "start": 152032969,
+      "end": 152046729
     }, {
       "filename": "/content/textures/ui/Settings/Help/BButtonLight.png",
-      "start": 152046695,
-      "end": 152050892
+      "start": 152046729,
+      "end": 152050926
     }, {
       "filename": "/content/textures/ui/Settings/Help/BButtonLight@2x.png",
-      "start": 152050892,
-      "end": 152061219
+      "start": 152050926,
+      "end": 152061253
     }, {
       "filename": "/content/textures/ui/Settings/Help/EscapeIcon.png",
-      "start": 152061219,
-      "end": 152062227
+      "start": 152061253,
+      "end": 152062261
     }, {
       "filename": "/content/textures/ui/Settings/Help/GenericController.png",
-      "start": 152062227,
-      "end": 152093829
+      "start": 152062261,
+      "end": 152093863
     }, {
       "filename": "/content/textures/ui/Settings/Help/GenericController@2x.png",
-      "start": 152093829,
-      "end": 152173245
+      "start": 152093863,
+      "end": 152173279
     }, {
       "filename": "/content/textures/ui/Settings/Help/LeaveIcon.png",
-      "start": 152173245,
-      "end": 152173661
+      "start": 152173279,
+      "end": 152173695
     }, {
       "filename": "/content/textures/ui/Settings/Help/ResetIcon.png",
-      "start": 152173661,
-      "end": 152174301
+      "start": 152173695,
+      "end": 152174335
     }, {
       "filename": "/content/textures/ui/Settings/Help/RotateCameraGesture.png",
-      "start": 152174301,
-      "end": 152182661
+      "start": 152174335,
+      "end": 152182695
     }, {
       "filename": "/content/textures/ui/Settings/Help/UseToolGesture.png",
-      "start": 152182661,
-      "end": 152186459
+      "start": 152182695,
+      "end": 152186493
     }, {
       "filename": "/content/textures/ui/Settings/Help/XButtonDark.png",
-      "start": 152186459,
-      "end": 152192011
+      "start": 152186493,
+      "end": 152192045
     }, {
       "filename": "/content/textures/ui/Settings/Help/XButtonDark@2x.png",
-      "start": 152192011,
-      "end": 152206456
+      "start": 152192045,
+      "end": 152206490
     }, {
       "filename": "/content/textures/ui/Settings/Help/XButtonLight.png",
-      "start": 152206456,
-      "end": 152210502
+      "start": 152206490,
+      "end": 152210536
     }, {
       "filename": "/content/textures/ui/Settings/Help/XButtonLight@2x.png",
-      "start": 152210502,
-      "end": 152220550
+      "start": 152210536,
+      "end": 152220584
     }, {
       "filename": "/content/textures/ui/Settings/Help/XboxController.png",
-      "start": 152220550,
-      "end": 152314276
+      "start": 152220584,
+      "end": 152314310
     }, {
       "filename": "/content/textures/ui/Settings/Help/YButtonDark.png",
-      "start": 152314276,
-      "end": 152319611
+      "start": 152314310,
+      "end": 152319645
     }, {
       "filename": "/content/textures/ui/Settings/Help/YButtonDark@2x.png",
-      "start": 152319611,
-      "end": 152333350
+      "start": 152319645,
+      "end": 152333384
     }, {
       "filename": "/content/textures/ui/Settings/Help/YButtonLight.png",
-      "start": 152333350,
-      "end": 152337154
+      "start": 152333384,
+      "end": 152337188
     }, {
       "filename": "/content/textures/ui/Settings/Help/YButtonLight@2x.png",
-      "start": 152337154,
-      "end": 152346877
+      "start": 152337188,
+      "end": 152346911
     }, {
       "filename": "/content/textures/ui/Settings/Help/ZoomGesture.png",
-      "start": 152346877,
-      "end": 152353686
+      "start": 152346911,
+      "end": 152353720
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarAssets/MenuBackground.png",
-      "start": 152353686,
-      "end": 152356618
+      "start": 152353720,
+      "end": 152356652
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarAssets/MenuButton.png",
-      "start": 152356618,
-      "end": 152357366
+      "start": 152356652,
+      "end": 152357400
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarAssets/MenuButton@2x.png",
-      "start": 152357366,
-      "end": 152359319
+      "start": 152357400,
+      "end": 152359353
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarAssets/MenuButtonSelected.png",
-      "start": 152359319,
-      "end": 152360082
+      "start": 152359353,
+      "end": 152360116
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarAssets/MenuButtonSelected@2x.png",
-      "start": 152360082,
-      "end": 152362037
+      "start": 152360116,
+      "end": 152362071
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarAssets/MenuSelection.png",
-      "start": 152362037,
-      "end": 152364897
+      "start": 152362071,
+      "end": 152364931
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarAssets/MenuSelection@2x.png",
-      "start": 152364897,
-      "end": 152367837
+      "start": 152364931,
+      "end": 152367871
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarIcons/GameSettingsTab.png",
-      "start": 152367837,
-      "end": 152370653
+      "start": 152367871,
+      "end": 152370687
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarIcons/GameSettingsTab@2x.png",
-      "start": 152370653,
-      "end": 152378053
+      "start": 152370687,
+      "end": 152378087
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarIcons/HelpTab.png",
-      "start": 152378053,
-      "end": 152380719
+      "start": 152378087,
+      "end": 152380753
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarIcons/HelpTab@2x.png",
-      "start": 152380719,
-      "end": 152388018
+      "start": 152380753,
+      "end": 152388052
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarIcons/HomeTab.png",
-      "start": 152388018,
-      "end": 152389129
+      "start": 152388052,
+      "end": 152389163
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarIcons/HomeTab@2x.png",
-      "start": 152389129,
-      "end": 152391993
+      "start": 152389163,
+      "end": 152392027
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarIcons/PlayersTabIcon.png",
-      "start": 152391993,
-      "end": 152392487
+      "start": 152392027,
+      "end": 152392521
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarIcons/PlayersTabIcon@2x.png",
-      "start": 152392487,
-      "end": 152394164
+      "start": 152392521,
+      "end": 152394198
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarIcons/RecordTab.png",
-      "start": 152394164,
-      "end": 152396068
+      "start": 152394198,
+      "end": 152396102
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarIcons/RecordTab@2x.png",
-      "start": 152396068,
-      "end": 152400642
+      "start": 152396102,
+      "end": 152400676
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarIcons/ReportAbuseTab.png",
-      "start": 152400642,
-      "end": 152402005
+      "start": 152400676,
+      "end": 152402039
     }, {
       "filename": "/content/textures/ui/Settings/MenuBarIcons/ReportAbuseTab@2x.png",
-      "start": 152402005,
-      "end": 152404648
+      "start": 152402039,
+      "end": 152404682
     }, {
       "filename": "/content/textures/ui/Settings/Radial/Alert.png",
-      "start": 152404648,
-      "end": 152407258
+      "start": 152404682,
+      "end": 152407292
     }, {
       "filename": "/content/textures/ui/Settings/Radial/Alert@2x.png",
-      "start": 152407258,
-      "end": 152413949
+      "start": 152407292,
+      "end": 152413983
     }, {
       "filename": "/content/textures/ui/Settings/Radial/Backpack.png",
-      "start": 152413949,
-      "end": 152416143
+      "start": 152413983,
+      "end": 152416177
     }, {
       "filename": "/content/textures/ui/Settings/Radial/Backpack@2x.png",
-      "start": 152416143,
-      "end": 152421468
+      "start": 152416177,
+      "end": 152421502
     }, {
       "filename": "/content/textures/ui/Settings/Radial/Bottom.png",
-      "start": 152421468,
-      "end": 152432349
+      "start": 152421502,
+      "end": 152432383
     }, {
       "filename": "/content/textures/ui/Settings/Radial/BottomLeft.png",
-      "start": 152432349,
-      "end": 152443541
+      "start": 152432383,
+      "end": 152443575
     }, {
       "filename": "/content/textures/ui/Settings/Radial/BottomLeftSelected.png",
-      "start": 152443541,
-      "end": 152454555
+      "start": 152443575,
+      "end": 152454589
     }, {
       "filename": "/content/textures/ui/Settings/Radial/BottomRight.png",
-      "start": 152454555,
-      "end": 152465780
+      "start": 152454589,
+      "end": 152465814
     }, {
       "filename": "/content/textures/ui/Settings/Radial/BottomRightSelected.png",
-      "start": 152465780,
-      "end": 152476553
+      "start": 152465814,
+      "end": 152476587
     }, {
       "filename": "/content/textures/ui/Settings/Radial/BottomSelected.png",
-      "start": 152476553,
-      "end": 152486368
+      "start": 152476587,
+      "end": 152486402
     }, {
       "filename": "/content/textures/ui/Settings/Radial/Chat.png",
-      "start": 152486368,
-      "end": 152488510
+      "start": 152486402,
+      "end": 152488544
     }, {
       "filename": "/content/textures/ui/Settings/Radial/Chat@2x.png",
-      "start": 152488510,
-      "end": 152493653
+      "start": 152488544,
+      "end": 152493687
     }, {
       "filename": "/content/textures/ui/Settings/Radial/EmptyBottom.png",
-      "start": 152493653,
-      "end": 152507706
+      "start": 152493687,
+      "end": 152507740
     }, {
       "filename": "/content/textures/ui/Settings/Radial/EmptyBottomLeft.png",
-      "start": 152507706,
-      "end": 152522281
+      "start": 152507740,
+      "end": 152522315
     }, {
       "filename": "/content/textures/ui/Settings/Radial/EmptyBottomRight.png",
-      "start": 152522281,
-      "end": 152536962
+      "start": 152522315,
+      "end": 152536996
     }, {
       "filename": "/content/textures/ui/Settings/Radial/EmptyTop.png",
-      "start": 152536962,
-      "end": 152550995
+      "start": 152536996,
+      "end": 152551029
     }, {
       "filename": "/content/textures/ui/Settings/Radial/EmptyTopLeft.png",
-      "start": 152550995,
-      "end": 152565621
+      "start": 152551029,
+      "end": 152565655
     }, {
       "filename": "/content/textures/ui/Settings/Radial/EmptyTopRight.png",
-      "start": 152565621,
-      "end": 152580573
+      "start": 152565655,
+      "end": 152580607
     }, {
       "filename": "/content/textures/ui/Settings/Radial/Leave.png",
-      "start": 152580573,
-      "end": 152582696
+      "start": 152580607,
+      "end": 152582730
     }, {
       "filename": "/content/textures/ui/Settings/Radial/Leave@2x.png",
-      "start": 152582696,
-      "end": 152588170
+      "start": 152582730,
+      "end": 152588204
     }, {
       "filename": "/content/textures/ui/Settings/Radial/Menu.png",
-      "start": 152588170,
-      "end": 152589284
+      "start": 152588204,
+      "end": 152589318
     }, {
       "filename": "/content/textures/ui/Settings/Radial/Menu@2x.png",
-      "start": 152589284,
-      "end": 152592121
+      "start": 152589318,
+      "end": 152592155
     }, {
       "filename": "/content/textures/ui/Settings/Radial/PlayerList.png",
-      "start": 152592121,
-      "end": 152593511
+      "start": 152592155,
+      "end": 152593545
     }, {
       "filename": "/content/textures/ui/Settings/Radial/PlayerList@2x.png",
-      "start": 152593511,
-      "end": 152597325
+      "start": 152593545,
+      "end": 152597359
     }, {
       "filename": "/content/textures/ui/Settings/Radial/RadialLabel.png",
-      "start": 152597325,
-      "end": 152600738
+      "start": 152597359,
+      "end": 152600772
     }, {
       "filename": "/content/textures/ui/Settings/Radial/RadialLabel@2x.png",
-      "start": 152600738,
-      "end": 152605019
+      "start": 152600772,
+      "end": 152605053
     }, {
       "filename": "/content/textures/ui/Settings/Radial/Top.png",
-      "start": 152605019,
-      "end": 152615932
+      "start": 152605053,
+      "end": 152615966
     }, {
       "filename": "/content/textures/ui/Settings/Radial/TopLeft.png",
-      "start": 152615932,
-      "end": 152627156
+      "start": 152615966,
+      "end": 152627190
     }, {
       "filename": "/content/textures/ui/Settings/Radial/TopLeftSelected.png",
-      "start": 152627156,
-      "end": 152637486
+      "start": 152627190,
+      "end": 152637520
     }, {
       "filename": "/content/textures/ui/Settings/Radial/TopRight.png",
-      "start": 152637486,
-      "end": 152648927
+      "start": 152637520,
+      "end": 152648961
     }, {
       "filename": "/content/textures/ui/Settings/Radial/TopRightSelected.png",
-      "start": 152648927,
-      "end": 152659587
+      "start": 152648961,
+      "end": 152659621
     }, {
       "filename": "/content/textures/ui/Settings/Radial/TopSelected.png",
-      "start": 152659587,
-      "end": 152669753
+      "start": 152659621,
+      "end": 152669787
     }, {
       "filename": "/content/textures/ui/Settings/Slider/BarLeft.png",
-      "start": 152669753,
-      "end": 152669964
+      "start": 152669787,
+      "end": 152669998
     }, {
       "filename": "/content/textures/ui/Settings/Slider/BarLeft@2x.png",
-      "start": 152669964,
-      "end": 152670326
+      "start": 152669998,
+      "end": 152670360
     }, {
       "filename": "/content/textures/ui/Settings/Slider/BarRight.png",
-      "start": 152670326,
-      "end": 152670518
+      "start": 152670360,
+      "end": 152670552
     }, {
       "filename": "/content/textures/ui/Settings/Slider/BarRight@2x.png",
-      "start": 152670518,
-      "end": 152670861
+      "start": 152670552,
+      "end": 152670895
     }, {
       "filename": "/content/textures/ui/Settings/Slider/Left.png",
-      "start": 152670861,
-      "end": 152671226
+      "start": 152670895,
+      "end": 152671260
     }, {
       "filename": "/content/textures/ui/Settings/Slider/Left@2x.png",
-      "start": 152671226,
-      "end": 152671907
+      "start": 152671260,
+      "end": 152671941
     }, {
       "filename": "/content/textures/ui/Settings/Slider/Right.png",
-      "start": 152671907,
-      "end": 152672245
+      "start": 152671941,
+      "end": 152672279
     }, {
       "filename": "/content/textures/ui/Settings/Slider/Right@2x.png",
-      "start": 152672245,
-      "end": 152672979
+      "start": 152672279,
+      "end": 152673013
     }, {
       "filename": "/content/textures/ui/Settings/Slider/SelectedBarLeft.png",
-      "start": 152672979,
-      "end": 152673176
+      "start": 152673013,
+      "end": 152673210
     }, {
       "filename": "/content/textures/ui/Settings/Slider/SelectedBarLeft@2x.png",
-      "start": 152673176,
-      "end": 152673538
+      "start": 152673210,
+      "end": 152673572
     }, {
       "filename": "/content/textures/ui/Settings/Slider/SelectedBarRight.png",
-      "start": 152673538,
-      "end": 152673726
+      "start": 152673572,
+      "end": 152673760
     }, {
       "filename": "/content/textures/ui/Settings/Slider/SelectedBarRight@2x.png",
-      "start": 152673726,
-      "end": 152674038
+      "start": 152673760,
+      "end": 152674072
     }, {
       "filename": "/content/textures/ui/SettingsButton.png",
-      "start": 152674038,
-      "end": 152677524
+      "start": 152674072,
+      "end": 152677558
     }, {
       "filename": "/content/textures/ui/SettingsButton_dn.png",
-      "start": 152677524,
-      "end": 152680926
+      "start": 152677558,
+      "end": 152680960
     }, {
       "filename": "/content/textures/ui/SettingsButton_ds.png",
-      "start": 152680926,
-      "end": 152683517
+      "start": 152680960,
+      "end": 152683551
     }, {
       "filename": "/content/textures/ui/SettingsButton_ovr.png",
-      "start": 152683517,
-      "end": 152686919
+      "start": 152683551,
+      "end": 152686953
     }, {
       "filename": "/content/textures/ui/SingleButton.png",
-      "start": 152686919,
-      "end": 152688270
+      "start": 152686953,
+      "end": 152688304
     }, {
       "filename": "/content/textures/ui/SingleButtonDown.png",
-      "start": 152688270,
-      "end": 152689602
+      "start": 152688304,
+      "end": 152689636
     }, {
       "filename": "/content/textures/ui/Slate.png",
-      "start": 152689602,
-      "end": 152691346
+      "start": 152689636,
+      "end": 152691380
     }, {
       "filename": "/content/textures/ui/Slider-BKG-Center.png",
-      "start": 152691346,
-      "end": 152692278
+      "start": 152691380,
+      "end": 152692312
     }, {
       "filename": "/content/textures/ui/Slider-BKG-Center@2x.png",
-      "start": 152692278,
-      "end": 152693210
+      "start": 152692312,
+      "end": 152693244
     }, {
       "filename": "/content/textures/ui/Slider-BKG-Left-Cap.png",
-      "start": 152693210,
-      "end": 152694192
+      "start": 152693244,
+      "end": 152694226
     }, {
       "filename": "/content/textures/ui/Slider-BKG-Left-Cap@2x.png",
-      "start": 152694192,
-      "end": 152695273
+      "start": 152694226,
+      "end": 152695307
     }, {
       "filename": "/content/textures/ui/Slider-BKG-Right-Cap.png",
-      "start": 152695273,
-      "end": 152696264
+      "start": 152695307,
+      "end": 152696298
     }, {
       "filename": "/content/textures/ui/Slider-BKG-Right-Cap@2x.png",
-      "start": 152696264,
-      "end": 152697343
+      "start": 152696298,
+      "end": 152697377
     }, {
       "filename": "/content/textures/ui/Slider-Fill-Center.png",
-      "start": 152697343,
-      "end": 152698275
+      "start": 152697377,
+      "end": 152698309
     }, {
       "filename": "/content/textures/ui/Slider-Fill-Center@2x.png",
-      "start": 152698275,
-      "end": 152699207
+      "start": 152698309,
+      "end": 152699241
     }, {
       "filename": "/content/textures/ui/Slider-Fill-Left-Cap.png",
-      "start": 152699207,
-      "end": 152700190
+      "start": 152699241,
+      "end": 152700224
     }, {
       "filename": "/content/textures/ui/Slider-Fill-Left-Cap@2x.png",
-      "start": 152700190,
-      "end": 152701250
+      "start": 152700224,
+      "end": 152701284
     }, {
       "filename": "/content/textures/ui/Slider-Fill-Right-Cap.png",
-      "start": 152701250,
-      "end": 152702240
+      "start": 152701284,
+      "end": 152702274
     }, {
       "filename": "/content/textures/ui/Slider-Fill-Right-Cap@2x.png",
-      "start": 152702240,
-      "end": 152703318
+      "start": 152702274,
+      "end": 152703352
     }, {
       "filename": "/content/textures/ui/Slider.png",
-      "start": 152703318,
-      "end": 152704664
+      "start": 152703352,
+      "end": 152704698
     }, {
       "filename": "/content/textures/ui/Slider_dn.png",
-      "start": 152704664,
-      "end": 152705928
+      "start": 152704698,
+      "end": 152705962
     }, {
       "filename": "/content/textures/ui/Slider_sel.png",
-      "start": 152705928,
-      "end": 152707192
+      "start": 152705962,
+      "end": 152707226
     }, {
       "filename": "/content/textures/ui/Smooth.png",
-      "start": 152707192,
-      "end": 152707379
+      "start": 152707226,
+      "end": 152707413
     }, {
       "filename": "/content/textures/ui/StampToolButton.png",
-      "start": 152707379,
-      "end": 152708873
+      "start": 152707413,
+      "end": 152708907
     }, {
       "filename": "/content/textures/ui/StampToolButton_dn.png",
-      "start": 152708873,
-      "end": 152710672
+      "start": 152708907,
+      "end": 152710706
     }, {
       "filename": "/content/textures/ui/Studs.png",
-      "start": 152710672,
-      "end": 152713993
+      "start": 152710706,
+      "end": 152714027
     }, {
       "filename": "/content/textures/ui/SurfaceButton.png",
-      "start": 152713993,
-      "end": 152715900
+      "start": 152714027,
+      "end": 152715934
     }, {
       "filename": "/content/textures/ui/SurfaceButton_dn.png",
-      "start": 152715900,
-      "end": 152717889
+      "start": 152715934,
+      "end": 152717923
     }, {
       "filename": "/content/textures/ui/SurfaceMenu.png",
-      "start": 152717889,
-      "end": 152719332
+      "start": 152717923,
+      "end": 152719366
     }, {
       "filename": "/content/textures/ui/TinyBcIcon.png",
-      "start": 152719332,
-      "end": 152722684
+      "start": 152719366,
+      "end": 152722718
     }, {
       "filename": "/content/textures/ui/TinyObcIcon.png",
-      "start": 152722684,
-      "end": 152725927
+      "start": 152722718,
+      "end": 152725961
     }, {
       "filename": "/content/textures/ui/TinyTbcIcon.png",
-      "start": 152725927,
-      "end": 152729273
+      "start": 152725961,
+      "end": 152729307
     }, {
       "filename": "/content/textures/ui/TixIcon.png",
-      "start": 152729273,
-      "end": 152730366
+      "start": 152729307,
+      "end": 152730400
     }, {
       "filename": "/content/textures/ui/ToggleFullScreen_ds.png",
-      "start": 152730366,
-      "end": 152730832
+      "start": 152730400,
+      "end": 152730866
     }, {
       "filename": "/content/textures/ui/ToolButton.png",
-      "start": 152730832,
-      "end": 152732533
+      "start": 152730866,
+      "end": 152732567
     }, {
       "filename": "/content/textures/ui/ToolButton_dn.png",
-      "start": 152732533,
-      "end": 152734234
+      "start": 152732567,
+      "end": 152734268
     }, {
       "filename": "/content/textures/ui/ToolButton_ds.png",
-      "start": 152734234,
-      "end": 152737434
+      "start": 152734268,
+      "end": 152737468
     }, {
       "filename": "/content/textures/ui/TopBar/dropshadow.png",
-      "start": 152737434,
-      "end": 152737597
+      "start": 152737468,
+      "end": 152737631
     }, {
       "filename": "/content/textures/ui/TopBar/dropshadow@2x.png",
-      "start": 152737597,
-      "end": 152737799
+      "start": 152737631,
+      "end": 152737833
     }, {
       "filename": "/content/textures/ui/TouchControlsSheet.png",
-      "start": 152737799,
-      "end": 152854719
+      "start": 152737833,
+      "end": 152854753
     }, {
       "filename": "/content/textures/ui/Universal.png",
-      "start": 152854719,
-      "end": 152857978
+      "start": 152854753,
+      "end": 152858012
     }, {
       "filename": "/content/textures/ui/Vehicle/SpeedBar.png",
-      "start": 152857978,
-      "end": 152858389
+      "start": 152858012,
+      "end": 152858423
     }, {
       "filename": "/content/textures/ui/Vehicle/SpeedBar@2x.png",
-      "start": 152858389,
-      "end": 152858854
+      "start": 152858423,
+      "end": 152858888
     }, {
       "filename": "/content/textures/ui/Vehicle/SpeedBarBKG.png",
-      "start": 152858854,
-      "end": 152859133
+      "start": 152858888,
+      "end": 152859167
     }, {
       "filename": "/content/textures/ui/Vehicle/SpeedBarBKG@2x.png",
-      "start": 152859133,
-      "end": 152859734
+      "start": 152859167,
+      "end": 152859768
     }, {
       "filename": "/content/textures/ui/Vehicle/SpeedBarEmpty.png",
-      "start": 152859734,
-      "end": 152859852
+      "start": 152859768,
+      "end": 152859886
     }, {
       "filename": "/content/textures/ui/Vehicle/SpeedBarEmpty@2x.png",
-      "start": 152859852,
-      "end": 152860019
+      "start": 152859886,
+      "end": 152860053
     }, {
       "filename": "/content/textures/ui/Weld.png",
-      "start": 152860019,
-      "end": 152863345
+      "start": 152860053,
+      "end": 152863379
     }, {
       "filename": "/content/textures/ui/Wood.png",
-      "start": 152863345,
-      "end": 152864320
+      "start": 152863379,
+      "end": 152864354
     }, {
       "filename": "/content/textures/ui/btn_grey.png",
-      "start": 152864320,
-      "end": 152864740
+      "start": 152864354,
+      "end": 152864774
     }, {
       "filename": "/content/textures/ui/btn_greyTransp.png",
-      "start": 152864740,
-      "end": 152865168
+      "start": 152864774,
+      "end": 152865202
     }, {
       "filename": "/content/textures/ui/btn_newBlue.png",
-      "start": 152865168,
-      "end": 152880063
+      "start": 152865202,
+      "end": 152880097
     }, {
       "filename": "/content/textures/ui/btn_newBlue@2x.png",
-      "start": 152880063,
-      "end": 152895375
+      "start": 152880097,
+      "end": 152895409
     }, {
       "filename": "/content/textures/ui/btn_newBlueGlow.png",
-      "start": 152895375,
-      "end": 152910269
+      "start": 152895409,
+      "end": 152910303
     }, {
       "filename": "/content/textures/ui/btn_newBlueGlow@2x.png",
-      "start": 152910269,
-      "end": 152925585
+      "start": 152910303,
+      "end": 152925619
     }, {
       "filename": "/content/textures/ui/btn_newGrey.png",
-      "start": 152925585,
-      "end": 152940462
+      "start": 152925619,
+      "end": 152940496
     }, {
       "filename": "/content/textures/ui/btn_newGrey@2x.png",
-      "start": 152940462,
-      "end": 152955758
+      "start": 152940496,
+      "end": 152955792
     }, {
       "filename": "/content/textures/ui/btn_newGreyGlow.png",
-      "start": 152955758,
-      "end": 152970636
+      "start": 152955792,
+      "end": 152970670
     }, {
       "filename": "/content/textures/ui/btn_newGreyGlow@2x.png",
-      "start": 152970636,
-      "end": 152985938
+      "start": 152970670,
+      "end": 152985972
     }, {
       "filename": "/content/textures/ui/btn_newWhite.png",
-      "start": 152985938,
-      "end": 153000768
+      "start": 152985972,
+      "end": 153000802
     }, {
       "filename": "/content/textures/ui/btn_newWhite@2x.png",
-      "start": 153000768,
-      "end": 153016019
+      "start": 153000802,
+      "end": 153016053
     }, {
       "filename": "/content/textures/ui/btn_newWhiteGlow.png",
-      "start": 153016019,
-      "end": 153030883
+      "start": 153016053,
+      "end": 153030917
     }, {
       "filename": "/content/textures/ui/btn_newWhiteGlow@2x.png",
-      "start": 153030883,
-      "end": 153046161
+      "start": 153030917,
+      "end": 153046195
     }, {
       "filename": "/content/textures/ui/btn_red.png",
-      "start": 153046161,
-      "end": 153046542
+      "start": 153046195,
+      "end": 153046576
     }, {
       "filename": "/content/textures/ui/btn_redGlow.png",
-      "start": 153046542,
-      "end": 153047065
+      "start": 153046576,
+      "end": 153047099
     }, {
       "filename": "/content/textures/ui/btn_white.png",
-      "start": 153047065,
-      "end": 153047431
+      "start": 153047099,
+      "end": 153047465
     }, {
       "filename": "/content/textures/ui/chatBubble_blue_notify_bkg.png",
-      "start": 153047431,
-      "end": 153048354
+      "start": 153047465,
+      "end": 153048388
     }, {
       "filename": "/content/textures/ui/chatBubble_green_notify_bkg.png",
-      "start": 153048354,
-      "end": 153049253
+      "start": 153048388,
+      "end": 153049287
     }, {
       "filename": "/content/textures/ui/chatBubble_red_notify_bkg.png",
-      "start": 153049253,
-      "end": 153050072
+      "start": 153049287,
+      "end": 153050106
     }, {
       "filename": "/content/textures/ui/chatBubble_white_notify_bkg.png",
-      "start": 153050072,
-      "end": 153050913
+      "start": 153050106,
+      "end": 153050947
     }, {
       "filename": "/content/textures/ui/chat_teamButton.png",
-      "start": 153050913,
-      "end": 153051281
+      "start": 153050947,
+      "end": 153051315
     }, {
       "filename": "/content/textures/ui/chat_teamButton@2x.png",
-      "start": 153051281,
-      "end": 153052123
+      "start": 153051315,
+      "end": 153052157
     }, {
       "filename": "/content/textures/ui/dialog_blue.png",
-      "start": 153052123,
-      "end": 153052424
+      "start": 153052157,
+      "end": 153052458
     }, {
       "filename": "/content/textures/ui/dialog_blue@2x.png",
-      "start": 153052424,
-      "end": 153053162
+      "start": 153052458,
+      "end": 153053196
     }, {
       "filename": "/content/textures/ui/dialog_ellipses.png",
-      "start": 153053162,
-      "end": 153053576
+      "start": 153053196,
+      "end": 153053610
     }, {
       "filename": "/content/textures/ui/dialog_green.png",
-      "start": 153053576,
-      "end": 153053884
+      "start": 153053610,
+      "end": 153053918
     }, {
       "filename": "/content/textures/ui/dialog_green@2x.png",
-      "start": 153053884,
-      "end": 153054594
+      "start": 153053918,
+      "end": 153054628
     }, {
       "filename": "/content/textures/ui/dialog_purpose_help.png",
-      "start": 153054594,
-      "end": 153055164
+      "start": 153054628,
+      "end": 153055198
     }, {
       "filename": "/content/textures/ui/dialog_purpose_quest.png",
-      "start": 153055164,
-      "end": 153055493
+      "start": 153055198,
+      "end": 153055527
     }, {
       "filename": "/content/textures/ui/dialog_purpose_shop.png",
-      "start": 153055493,
-      "end": 153056215
+      "start": 153055527,
+      "end": 153056249
     }, {
       "filename": "/content/textures/ui/dialog_red.png",
-      "start": 153056215,
-      "end": 153056537
+      "start": 153056249,
+      "end": 153056571
     }, {
       "filename": "/content/textures/ui/dialog_red@2x.png",
-      "start": 153056537,
-      "end": 153057170
+      "start": 153056571,
+      "end": 153057204
     }, {
       "filename": "/content/textures/ui/dialog_tail.png",
-      "start": 153057170,
-      "end": 153057361
+      "start": 153057204,
+      "end": 153057395
     }, {
       "filename": "/content/textures/ui/dialog_tail@2x.png",
-      "start": 153057361,
-      "end": 153057647
+      "start": 153057395,
+      "end": 153057681
     }, {
       "filename": "/content/textures/ui/dialog_white.png",
-      "start": 153057647,
-      "end": 153057840
+      "start": 153057681,
+      "end": 153057874
     }, {
       "filename": "/content/textures/ui/dialog_white@2x.png",
-      "start": 153057840,
-      "end": 153058190
+      "start": 153057874,
+      "end": 153058224
     }, {
       "filename": "/content/textures/ui/dropdown_arrow.png",
-      "start": 153058190,
-      "end": 153058508
+      "start": 153058224,
+      "end": 153058542
     }, {
       "filename": "/content/textures/ui/dropdown_arrow@2x.png",
-      "start": 153058508,
-      "end": 153059139
+      "start": 153058542,
+      "end": 153059173
     }, {
       "filename": "/content/textures/ui/expandPlayerList.png",
-      "start": 153059139,
-      "end": 153059348
+      "start": 153059173,
+      "end": 153059382
     }, {
       "filename": "/content/textures/ui/expandPlayerList@2x.png",
-      "start": 153059348,
-      "end": 153059774
+      "start": 153059382,
+      "end": 153059808
     }, {
       "filename": "/content/textures/ui/homeButton.png",
-      "start": 153059774,
-      "end": 153074457
+      "start": 153059808,
+      "end": 153074491
     }, {
       "filename": "/content/textures/ui/homeButton@2x.png",
-      "start": 153074457,
-      "end": 153075263
+      "start": 153074491,
+      "end": 153075297
     }, {
       "filename": "/content/textures/ui/icon_BC-16.png",
-      "start": 153075263,
-      "end": 153076378
+      "start": 153075297,
+      "end": 153076412
     }, {
       "filename": "/content/textures/ui/icon_OBC-16.png",
-      "start": 153076378,
-      "end": 153077538
+      "start": 153076412,
+      "end": 153077572
     }, {
       "filename": "/content/textures/ui/icon_TBC-16.png",
-      "start": 153077538,
-      "end": 153078705
+      "start": 153077572,
+      "end": 153078739
     }, {
       "filename": "/content/textures/ui/icon_admin-16.png",
-      "start": 153078705,
-      "end": 153080294
+      "start": 153078739,
+      "end": 153080328
     }, {
       "filename": "/content/textures/ui/icon_follower-16.png",
-      "start": 153080294,
-      "end": 153081455
+      "start": 153080328,
+      "end": 153081489
     }, {
       "filename": "/content/textures/ui/icon_following-16.png",
-      "start": 153081455,
-      "end": 153082682
+      "start": 153081489,
+      "end": 153082716
     }, {
       "filename": "/content/textures/ui/icon_friendrequestrecieved-16.png",
-      "start": 153082682,
-      "end": 153083832
+      "start": 153082716,
+      "end": 153083866
     }, {
       "filename": "/content/textures/ui/icon_friendrequestsent_16.png",
-      "start": 153083832,
-      "end": 153084891
+      "start": 153083866,
+      "end": 153084925
     }, {
       "filename": "/content/textures/ui/icon_friends_16.png",
-      "start": 153084891,
-      "end": 153086102
+      "start": 153084925,
+      "end": 153086136
     }, {
       "filename": "/content/textures/ui/icon_mutualfollowing-16.png",
-      "start": 153086102,
-      "end": 153087204
+      "start": 153086136,
+      "end": 153087238
     }, {
       "filename": "/content/textures/ui/icon_placeowner.png",
-      "start": 153087204,
-      "end": 153088425
+      "start": 153087238,
+      "end": 153088459
     }, {
       "filename": "/content/textures/ui/mouseLock_off.png",
-      "start": 153088425,
-      "end": 153089993
+      "start": 153088459,
+      "end": 153090027
     }, {
       "filename": "/content/textures/ui/mouseLock_off@2x.png",
-      "start": 153089993,
-      "end": 153094212
+      "start": 153090027,
+      "end": 153094246
     }, {
       "filename": "/content/textures/ui/mouseLock_on.png",
-      "start": 153094212,
-      "end": 153096136
+      "start": 153094246,
+      "end": 153096170
     }, {
       "filename": "/content/textures/ui/mouseLock_on@2x.png",
-      "start": 153096136,
-      "end": 153101030
+      "start": 153096170,
+      "end": 153101064
     }, {
       "filename": "/content/textures/ui/newBkg_square.png",
-      "start": 153101030,
-      "end": 153115842
+      "start": 153101064,
+      "end": 153115876
     }, {
       "filename": "/content/textures/ui/newBkg_square@2x.png",
-      "start": 153115842,
-      "end": 153130983
+      "start": 153115876,
+      "end": 153131017
     }, {
       "filename": "/content/textures/ui/scroll-bottom.png",
-      "start": 153130983,
-      "end": 153131165
+      "start": 153131017,
+      "end": 153131199
     }, {
       "filename": "/content/textures/ui/scroll-bottom@2x.png",
-      "start": 153131165,
-      "end": 153145833
+      "start": 153131199,
+      "end": 153145867
     }, {
       "filename": "/content/textures/ui/scroll-middle.png",
-      "start": 153145833,
-      "end": 153145948
+      "start": 153145867,
+      "end": 153145982
     }, {
       "filename": "/content/textures/ui/scroll-middle@2x.png",
-      "start": 153145948,
-      "end": 153146066
+      "start": 153145982,
+      "end": 153146100
     }, {
       "filename": "/content/textures/ui/scroll-top.png",
-      "start": 153146066,
-      "end": 153146264
+      "start": 153146100,
+      "end": 153146298
     }, {
       "filename": "/content/textures/ui/scroll-top@2x.png",
-      "start": 153146264,
-      "end": 153160943
+      "start": 153146298,
+      "end": 153160977
     }, {
       "filename": "/content/textures/ui/scrollbar.png",
-      "start": 153160943,
-      "end": 153161884
+      "start": 153160977,
+      "end": 153161918
     }, {
       "filename": "/content/textures/ui/scrollbuttonDown.png",
-      "start": 153161884,
-      "end": 153163002
+      "start": 153161918,
+      "end": 153163036
     }, {
       "filename": "/content/textures/ui/scrollbuttonDown_dn.png",
-      "start": 153163002,
-      "end": 153164093
+      "start": 153163036,
+      "end": 153164127
     }, {
       "filename": "/content/textures/ui/scrollbuttonDown_ds.png",
-      "start": 153164093,
-      "end": 153165211
+      "start": 153164127,
+      "end": 153165245
     }, {
       "filename": "/content/textures/ui/scrollbuttonDown_ovr.png",
-      "start": 153165211,
-      "end": 153166302
+      "start": 153165245,
+      "end": 153166336
     }, {
       "filename": "/content/textures/ui/scrollbuttonUp.png",
-      "start": 153166302,
-      "end": 153167414
+      "start": 153166336,
+      "end": 153167448
     }, {
       "filename": "/content/textures/ui/scrollbuttonUp_dn.png",
-      "start": 153167414,
-      "end": 153168504
+      "start": 153167448,
+      "end": 153168538
     }, {
       "filename": "/content/textures/ui/scrollbuttonUp_ds.png",
-      "start": 153168504,
-      "end": 153169614
+      "start": 153168538,
+      "end": 153169648
     }, {
       "filename": "/content/textures/ui/scrollbuttonUp_ovr.png",
-      "start": 153169614,
-      "end": 153170704
+      "start": 153169648,
+      "end": 153170738
     }, {
       "filename": "/content/textures/ui/slider_new_tab.png",
-      "start": 153170704,
-      "end": 153171672
+      "start": 153170738,
+      "end": 153171706
     }, {
       "filename": "/content/textures/ui/slider_new_tab@2x.png",
-      "start": 153171672,
-      "end": 153173857
+      "start": 153171706,
+      "end": 153173891
     }, {
       "filename": "/content/textures/water_Subsurface.dds",
-      "start": 153173857,
-      "end": 153195829
+      "start": 153173891,
+      "end": 153195863
     }, {
       "filename": "/content/textures/water_Wave.dds",
-      "start": 153195829,
-      "end": 153217801
+      "start": 153195863,
+      "end": 153217835
     }, {
       "filename": "/content/textures/wrench.png",
-      "start": 153217801,
-      "end": 153218411
+      "start": 153217835,
+      "end": 153218445
     }, {
       "filename": "/shaders/shaders.json",
-      "start": 153218411,
-      "end": 153236548
+      "start": 153218445,
+      "end": 153236582
     }, {
       "filename": "/shaders/shaders_d3d11.pack",
-      "start": 153236548,
-      "end": 153708568
+      "start": 153236582,
+      "end": 153708602
     }, {
       "filename": "/shaders/shaders_d3d11_durango.pack",
-      "start": 153708568,
-      "end": 154413344
+      "start": 153708602,
+      "end": 154413378
     }, {
       "filename": "/shaders/shaders_d3d9.pack",
-      "start": 154413344,
-      "end": 154647992
+      "start": 154413378,
+      "end": 154648026
     }, {
       "filename": "/shaders/shaders_glsl.pack",
-      "start": 154647992,
-      "end": 154980741
+      "start": 154648026,
+      "end": 154980775
     }, {
       "filename": "/shaders/shaders_glsl3.pack",
-      "start": 154980741,
-      "end": 155311950
+      "start": 154980775,
+      "end": 155311984
     }, {
       "filename": "/shaders/shaders_glsles.pack",
-      "start": 155311950,
-      "end": 155532632
+      "start": 155311984,
+      "end": 155532666
     }, {
       "filename": "/shaders/shaders_glsles3.pack",
-      "start": 155532632,
-      "end": 155909083
+      "start": 155532666,
+      "end": 155909117
     }, {
       "filename": "/shaders/source/adorn.hlsl",
-      "start": 155909083,
-      "end": 155916024
+      "start": 155909117,
+      "end": 155916058
     }, {
       "filename": "/shaders/source/aluminum.hlsl",
-      "start": 155916024,
-      "end": 155916639
+      "start": 155916058,
+      "end": 155916673
     }, {
       "filename": "/shaders/source/brick.hlsl",
-      "start": 155916639,
-      "end": 155917246
+      "start": 155916673,
+      "end": 155917280
     }, {
       "filename": "/shaders/source/cobblestone.hlsl",
-      "start": 155917246,
-      "end": 155917780
+      "start": 155917280,
+      "end": 155917814
     }, {
       "filename": "/shaders/source/common.h",
-      "start": 155917780,
-      "end": 155926403
+      "start": 155917814,
+      "end": 155926437
     }, {
       "filename": "/shaders/source/concrete.hlsl",
-      "start": 155926403,
-      "end": 155927017
+      "start": 155926437,
+      "end": 155927051
     }, {
       "filename": "/shaders/source/default.hlsl",
-      "start": 155927017,
-      "end": 155937034
+      "start": 155927051,
+      "end": 155937068
     }, {
       "filename": "/shaders/source/diamondplate.hlsl",
-      "start": 155937034,
-      "end": 155937611
+      "start": 155937068,
+      "end": 155937645
     }, {
       "filename": "/shaders/source/fabric.hlsl",
-      "start": 155937611,
-      "end": 155938219
+      "start": 155937645,
+      "end": 155938253
     }, {
       "filename": "/shaders/source/gbuffer.hlsl",
-      "start": 155938219,
-      "end": 155939062
+      "start": 155938253,
+      "end": 155939096
     }, {
       "filename": "/shaders/source/globals.h",
-      "start": 155939062,
-      "end": 155939843
+      "start": 155939096,
+      "end": 155939877
     }, {
       "filename": "/shaders/source/granite.hlsl",
-      "start": 155939843,
-      "end": 155940459
+      "start": 155939877,
+      "end": 155940493
     }, {
       "filename": "/shaders/source/grass.hlsl",
-      "start": 155940459,
-      "end": 155941070
+      "start": 155940493,
+      "end": 155941104
     }, {
       "filename": "/shaders/source/ice.hlsl",
-      "start": 155941070,
-      "end": 155941686
+      "start": 155941104,
+      "end": 155941720
     }, {
       "filename": "/shaders/source/marble.hlsl",
-      "start": 155941686,
-      "end": 155942296
+      "start": 155941720,
+      "end": 155942330
     }, {
       "filename": "/shaders/source/material.hlsl",
-      "start": 155942296,
-      "end": 155945215
+      "start": 155942330,
+      "end": 155945249
     }, {
       "filename": "/shaders/source/megacluster.hlsl",
-      "start": 155945215,
-      "end": 155950477
+      "start": 155945249,
+      "end": 155950511
     }, {
       "filename": "/shaders/source/metal.hlsl",
-      "start": 155950477,
-      "end": 155951058
+      "start": 155950511,
+      "end": 155951092
     }, {
       "filename": "/shaders/source/neon.hlsl",
-      "start": 155951058,
-      "end": 155951122
+      "start": 155951092,
+      "end": 155951156
     }, {
       "filename": "/shaders/source/particle.hlsl",
-      "start": 155951122,
-      "end": 155957928
+      "start": 155951156,
+      "end": 155957962
     }, {
       "filename": "/shaders/source/pebble.hlsl",
-      "start": 155957928,
-      "end": 155958505
+      "start": 155957962,
+      "end": 155958539
     }, {
       "filename": "/shaders/source/plastic.hlsl",
-      "start": 155958505,
-      "end": 155959735
+      "start": 155958539,
+      "end": 155959769
     }, {
       "filename": "/shaders/source/profiler.hlsl",
-      "start": 155959735,
-      "end": 155960534
+      "start": 155959769,
+      "end": 155960568
     }, {
       "filename": "/shaders/source/rust.hlsl",
-      "start": 155960534,
-      "end": 155961145
+      "start": 155960568,
+      "end": 155961179
     }, {
       "filename": "/shaders/source/sand.hlsl",
-      "start": 155961145,
-      "end": 155961718
+      "start": 155961179,
+      "end": 155961752
     }, {
       "filename": "/shaders/source/screenspace.hlsl",
-      "start": 155961718,
-      "end": 155966707
+      "start": 155961752,
+      "end": 155966741
     }, {
       "filename": "/shaders/source/shadow.hlsl",
-      "start": 155966707,
-      "end": 155967824
+      "start": 155966741,
+      "end": 155967858
     }, {
       "filename": "/shaders/source/sky.hlsl",
-      "start": 155967824,
-      "end": 155969022
+      "start": 155967858,
+      "end": 155969056
     }, {
       "filename": "/shaders/source/slate.hlsl",
-      "start": 155969022,
-      "end": 155969605
+      "start": 155969056,
+      "end": 155969639
     }, {
       "filename": "/shaders/source/smoothcluster.hlsl",
-      "start": 155969605,
-      "end": 155974843
+      "start": 155969639,
+      "end": 155974877
     }, {
       "filename": "/shaders/source/smoothplastic.hlsl",
-      "start": 155974843,
-      "end": 155974889
+      "start": 155974877,
+      "end": 155974923
     }, {
       "filename": "/shaders/source/smoothwater.hlsl",
-      "start": 155974889,
-      "end": 155983935
+      "start": 155974923,
+      "end": 155983969
     }, {
       "filename": "/shaders/source/ssao.hlsl",
-      "start": 155983935,
-      "end": 155993464
+      "start": 155983969,
+      "end": 155993498
     }, {
       "filename": "/shaders/source/texcomp.hlsl",
-      "start": 155993464,
-      "end": 155994238
+      "start": 155993498,
+      "end": 155994272
     }, {
       "filename": "/shaders/source/ui.hlsl",
-      "start": 155994238,
-      "end": 155995457
+      "start": 155994272,
+      "end": 155995491
     }, {
       "filename": "/shaders/source/water.hlsl",
-      "start": 155995457,
-      "end": 156001065
+      "start": 155995491,
+      "end": 156001099
     }, {
       "filename": "/shaders/source/wood.hlsl",
-      "start": 156001065,
-      "end": 156001642
+      "start": 156001099,
+      "end": 156001676
     }, {
       "filename": "/shaders/source/woodplanks.hlsl",
-      "start": 156001642,
-      "end": 156002248
+      "start": 156001676,
+      "end": 156002282
     } ],
-    "remote_package_size": 156002248
+    "remote_package_size": 156002282
   });
 })();
 
-// end include: C:\Users\Lucid\AppData\Local\Temp\tmpjced8ars.js
-// include: C:\Users\Lucid\AppData\Local\Temp\tmp9rvts_ud.js
+// end include: C:\Users\Lucid\AppData\Local\Temp\tmps3mzsr7w.js
+// include: C:\Users\Lucid\AppData\Local\Temp\tmpfd6opjar.js
 // All the pre-js content up to here must remain later on, we need to run
 // it.
 if (Module["$ww"] || (typeof ENVIRONMENT_IS_PTHREAD != "undefined" && ENVIRONMENT_IS_PTHREAD)) Module["preRun"] = [];
 
 var necessaryPreJSTasks = Module["preRun"].slice();
 
-// end include: C:\Users\Lucid\AppData\Local\Temp\tmp9rvts_ud.js
-// include: C:\Users\Lucid\AppData\Local\Temp\tmpt_ur9e26.js
+// end include: C:\Users\Lucid\AppData\Local\Temp\tmpfd6opjar.js
+// include: C:\Users\Lucid\AppData\Local\Temp\tmphszwnn8d.js
 if (!Module["preRun"]) throw "Module.preRun should exist because file support used it; did a pre-js delete it?";
 
 necessaryPreJSTasks.forEach(task => {
   if (Module["preRun"].indexOf(task) < 0) throw "All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?";
 });
 
-// end include: C:\Users\Lucid\AppData\Local\Temp\tmpt_ur9e26.js
+// end include: C:\Users\Lucid\AppData\Local\Temp\tmphszwnn8d.js
 // Sometimes an existing Module object exists with properties
 // meant to overwrite the default module functionality. Here
 // we collect those properties and reapply _after_ we configure
@@ -5306,7 +5306,7 @@ function dbg(...args) {
 // end include: runtime_debug.js
 // === Body ===
 var ASM_CONSTS = {
-  4071512: $0 => {
+  4071704: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -5314,7 +5314,7 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  4071737: () => {
+  4071929: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -5322,7 +5322,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  4071884: () => {
+  4072076: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -5330,7 +5330,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  4072118: $0 => {
+  4072310: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -5354,11 +5354,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  4072670: () => {
+  4072862: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  4072738: ($0, $1, $2, $3) => {
+  4072930: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -5400,7 +5400,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  4074431: ($0, $1, $2, $3) => {
+  4074623: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -5432,7 +5432,7 @@ var ASM_CONSTS = {
       SDL2.audio.silenceTimer = setInterval(silence_callback, ($1 / SDL2.audioContext.sampleRate) * 1e3);
     }
   },
-  4075606: ($0, $1) => {
+  4075798: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -5451,7 +5451,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  4076211: ($0, $1) => {
+  4076403: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var buf = $0 >>> 2;
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
@@ -5465,7 +5465,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  4076700: $0 => {
+  4076892: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -5499,7 +5499,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  4077706: ($0, $1, $2) => {
+  4077898: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -5570,7 +5570,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  4079174: ($0, $1, $2, $3, $4) => {
+  4079366: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -5607,18 +5607,18 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  4080162: $0 => {
+  4080354: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  4080245: () => {
+  4080437: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  4080314: () => window.innerWidth,
-  4080344: () => window.innerHeight
+  4080506: () => window.innerWidth,
+  4080536: () => window.innerHeight
 };
 
 // end include: preamble.js
