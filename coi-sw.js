@@ -1,5 +1,5 @@
 // !! Set this to your Cloudflare Worker URL after deploying cf_worker.js !!
-var CF_WORKER = 'https://roweb-proxy.YOUR_SUBDOMAIN.workers.dev';
+var CF_WORKER = 'https://rowebproxy.lucidx190.workers.dev/';
 
 self.addEventListener("install", () => self.skipWaiting());
 self.addEventListener("activate", e => e.waitUntil(self.clients.claim()));
