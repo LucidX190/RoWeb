@@ -456,7 +456,7 @@
           _coiParams.set('coi-sw', '');
           location.search = _coiParams.toString();
         })
-        .catch(function(e) { console.warn('[COI] SW registration failed:', e); });
+        .catch(function(e) { console.error('[COI] SW registration failed:', e); });
     }
   }
   </script>
@@ -468,7 +468,7 @@
     <div id="logo">ROBLOX <span>client</span></div>
     <div class="topbar-sep"></div>
     <div id="topbar-status">Initializing engine…</div>
-    <button class="tb-btn" id="bot-btn" onclick="reloadSolo()" disabled title="Reload the current game with 2-player requirements removed">+ Bot Player</button>
+    <button class="tb-btn" id="bot-btn" onclick="reloadSolo()" disabled title="Add a bot player to the current game">+ Bot Player</button>
     <button class="tb-btn" onclick="requestFullscreen()">⛶ Fullscreen</button>
   </div>
 
@@ -750,6 +750,7 @@
       })
       .catch(function(e) {
         console.error('Main games fetch error:', e);
+        // Fallback: try contents API (flat root)
         fetch('https://api.github.com/repos/' + MAIN_OWNER + '/' + MAIN_REPO + '/contents/')
           .then(function(r) { return r.json(); })
           .then(function(files) {
@@ -774,6 +775,7 @@
   var CUSTOM_BRANCH = 'main';
 
   function loadCustomGames() {
+    // Load repo files
     fetch('https://api.github.com/repos/' + CUSTOM_OWNER + '/' + CUSTOM_REPO + '/contents/')
       .then(function(r) { return r.ok ? r.json() : []; })
       .then(function(files) {
@@ -790,6 +792,7 @@
       })
       .catch(function() { mergeCustom([]); });
 
+    // Load IndexedDB games
     dbLoadAll().then(function(entries) {
       var dbGames = entries.map(function(e) {
         var blobUrl = URL.createObjectURL(new Blob([e.data]));
@@ -836,6 +839,7 @@
         var buf = ev.target.result;
         dbSaveGame(file.name, buf).then(function() {
           var blobUrl = URL.createObjectURL(new Blob([buf]));
+          // Remove duplicate by name if present
           allGames.custom = allGames.custom.filter(function(g) { return g.name !== file.name; });
           allGames.custom.push({name: file.name, path: null, blobUrl: blobUrl, fromDB: true});
           allGames.custom.sort(function(a,b) { return a.name.localeCompare(b.name); });
@@ -846,6 +850,7 @@
     });
   }
 
+  // Drag and drop
   var dropZone = document.getElementById('drop-zone');
   dropZone.addEventListener('dragover', function(e) {
     e.preventDefault();
@@ -858,6 +863,7 @@
     handleFiles(e.dataTransfer.files);
   });
 
+  // Also whole-sidebar drop
   document.getElementById('sidebar').addEventListener('dragover', function(e) {
     if (currentTab === 'custom') { e.preventDefault(); dropZone.classList.add('hover'); }
   });
@@ -889,7 +895,7 @@
       Module.ccall('spawnBotPlayer', null, [], []);
       setStatus('Bot player added');
     } catch(e) {
-      setStatus('Bot needs rebuild — run build_web.bat then re-upload UniversalClient.js + .wasm');
+      setStatus('Bot needs rebuild — re-upload UniversalClient.js + .wasm');
       console.warn('[Bot] spawnBotPlayer not exported yet — rebuild required:', e.message);
     }
   }
@@ -900,10 +906,6 @@
       pendingLoad = {url: url, name: name};
       return;
     }
-    doLoadWithPatch(url, name);
-  }
-
-  function doLoadWithPatch(url, name) {
     currentGameUrl  = url;
     currentGameName = name;
     doLoad(url, name);
@@ -941,6 +943,7 @@
   }
 
   function requestFullscreen() {
+    // Prefer Emscripten's built-in handler (properly resizes the SDL2 canvas)
     if (typeof Module !== 'undefined' && Module.requestFullscreen) {
       try { Module.requestFullscreen(true, true); return; } catch(e) {}
     }
@@ -949,8 +952,15 @@
     else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
   }
 
+  // ═══════════════════════════════════════════════════════════════════════
+  // Pointer lock / keyboard focus
+  // Keep the canvas focused so SDL2 continues receiving keyboard events
+  // (including Escape) after the browser releases pointer lock.  This lets
+  // the built-in Roblox SettingsHub (CoreScript) handle the Escape key.
+  // ═══════════════════════════════════════════════════════════════════════
   document.addEventListener('pointerlockchange', function() {
     if (!document.pointerLockElement && moduleReady) {
+      // Re-focus canvas so SDL2 still gets keyboard events (Escape → SettingsHub)
       document.getElementById('canvas').focus();
     }
   });
@@ -967,12 +977,6 @@
       });
       return c;
     })(),
-
-    // Redirect .data requests to the pre-assembled blob URL from split CDN parts
-    locateFile: function(path, prefix) {
-      if (path.endsWith('.data') && window.__dataUrl) return window.__dataUrl;
-      return (prefix || '') + path;
-    },
 
     setStatus: function(text) {
       var fill = document.getElementById('load-bar-fill');
@@ -1007,6 +1011,12 @@
         : 'Finalizing…');
     },
 
+    // Redirect .data requests to the pre-assembled blob URL from the split CDN loader
+    locateFile: function(path, prefix) {
+      if (path.endsWith('.data') && window.__dataUrl) return window.__dataUrl;
+      return (prefix || '') + path;
+    },
+
     onRuntimeInitialized: function() {
       Module.setStatus('');
       moduleReady = true;
@@ -1015,7 +1025,9 @@
       if (pendingLoad) {
         var p = pendingLoad;
         pendingLoad = null;
-        doLoadWithPatch(p.url, p.name);
+        currentGameUrl  = p.url;
+        currentGameName = p.name;
+        doLoad(p.url, p.name);
       }
     }
   };
@@ -1050,6 +1062,10 @@
       return;
     }
 
+    // Build the JSON args that PlayerConfigurer::configure() expects.
+    // WebSocketAddress → used by set_websocket_url() to configure SOCKFS.
+    // MachineAddress   → overridden to 127.0.0.1 in EMSCRIPTEN builds anyway.
+    // ClientTicket     → left empty (no auth in local/LAN play).
     var args = JSON.stringify({
       WebSocketAddress:    wsAddr,
       MachineAddress:      '127.0.0.1',
@@ -1085,6 +1101,7 @@
       return;
     }
 
+    // Re-enable join button after 10 s so the user can retry if connection fails
     setTimeout(function() {
       document.getElementById('mp-join-btn').disabled = false;
     }, 10000);
@@ -1099,6 +1116,7 @@
     loadCustomGames();
   }).catch(function(e) {
     console.error('IndexedDB open failed:', e);
+    // Still load games without IndexedDB
     loadMainGames();
     _dbCustom = [];
     _repoCustom = _repoCustom || null;
@@ -1118,26 +1136,19 @@
     var BASE_URL   = 'https://raw.githubusercontent.com/LucidX190/RoWeb/master/';
     var CACHE_NAME = 'uc-data-v2';
 
-    // Open the cache (falls back to plain fetch if Cache API is unavailable)
     var cache = null;
     try { cache = await caches.open(CACHE_NAME); } catch(e) {}
 
     var chunks = [];
     var part = 1;
-    var cachedCount = 0;
 
     while (true) {
       var num = String(part).padStart(3, '0');
       var url = BASE_URL + 'UniversalClient.data.' + num;
       var r = null;
 
-      // Try the cache first
-      if (cache) {
-        r = await cache.match(url);
-        if (r) cachedCount++;
-      }
+      if (cache) r = await cache.match(url);
 
-      // Not cached — fetch from network and store
       if (!r) {
         Module.setStatus('Downloading part ' + part + '…');
         try { r = await fetch(url); } catch(e) { break; }
