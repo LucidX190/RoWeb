@@ -884,8 +884,14 @@
   var currentGameName = null;
 
   function reloadSolo() {
-    if (!currentGameUrl) { setStatus('Load a game first.'); return; }
-    doLoadWithPatch(currentGameUrl, currentGameName);
+    if (!moduleReady) return;
+    try {
+      Module.ccall('spawnBotPlayer', null, [], []);
+      setStatus('Bot player added');
+    } catch(e) {
+      setStatus('Bot needs rebuild — run build_web.bat then re-upload UniversalClient.js + .wasm');
+      console.warn('[Bot] spawnBotPlayer not exported yet — rebuild required:', e.message);
+    }
   }
 
   function loadPlace(url, name) {
@@ -1110,7 +1116,7 @@
   <script>
   (async function() {
     var BASE_URL   = 'https://raw.githubusercontent.com/LucidX190/RoWeb/master/';
-    var CACHE_NAME = 'uc-data-v1';
+    var CACHE_NAME = 'uc-data-v2';
 
     // Open the cache (falls back to plain fetch if Cache API is unavailable)
     var cache = null;
